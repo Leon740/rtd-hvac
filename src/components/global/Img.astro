@@ -7,18 +7,19 @@ interface IImgProps {
   className?: string;
   width: number;
   height: number;
-  isAstro: boolean;
 }
 
-const { src, alt, className = '', width, height, isAstro = true } = Astro.props as IImgProps;
+const { src, alt, className = '', width, height } = Astro.props as IImgProps;
 
 const imgSrc = `/src/assets/images/${src}`;
 ---
 
-{
+<Image src={imgSrc} alt={alt} class={className} width={width} height={height} />
+
+<!-- {
   isAstro ? (
     <Image src={imgSrc} alt={alt} class={className} width={width} height={height} />
   ) : (
     <img src={imgSrc} alt={alt} class={className} />
   )
-}
+} -->
