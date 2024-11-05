@@ -20,7 +20,9 @@ const { isScroll = false } = Astro.props as IReviewsSectionProps;
   <SectionHeader img={REVIEWS_DATA.img} title={REVIEWS_DATA.title} />
 
   <div class={`container ${isScroll ? 'max-w-full p-0' : ''}`}>
-    <ul class={`flex gap-32 ${isScroll ? 'flex-row overflow-x-auto px-32' : 'flex-col'}`}>
+    <ul
+      class={`flex gap-32 ${isScroll ? 'flex-row flex-nowrap overflow-x-auto px-32' : 'flex-col'}`}
+    >
       {
         REVIEWS_DATA.reviews.map(({ title, paragraph, author }: IReviewsItem) => (
           <li
