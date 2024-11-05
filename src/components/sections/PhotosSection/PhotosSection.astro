@@ -2,8 +2,40 @@
 import PHOTOS_DATA from './photosData.json';
 import SectionHeader from '@components/global/SectionHeader.astro';
 import Img from '@components/global/Img.astro';
+
+interface IPhotosSectionProps {
+  isScroll: boolean;
+}
+
+const { isScroll = false } = Astro.props as IPhotosSectionProps;
 ---
 
 <div class='section-pt-128-flex-64'>
   <SectionHeader img={PHOTOS_DATA.img} title={PHOTOS_DATA.title} />
+
+  <div class={`container ${isScroll ? 'max-w-full p-0' : ''}`}>
+    <ul
+      class={`flex flex-row ${isScroll ? 'flex-nowrap overflow-x-auto px-32 gap-32' : 'flex-wrap -m-16'}`}
+    >
+      {
+        PHOTOS_DATA.images.map((img) => (
+          <li
+            class={`${isScroll ? 'flex-shrink-0 w-[256px]' : 'p-16 w-full sm:w-1/2 md:w-1/3 lg:w-1/4'}`}
+          >
+            <div class='rounded-16 p-16 bg-white'>
+              <div class='rounded-8 overflow-hidden'>
+                <Img
+                  src={img}
+                  alt='RTD HVAC Photos of work'
+                  className='w-full'
+                  width={224}
+                  height={300}
+                />
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
 </div>
