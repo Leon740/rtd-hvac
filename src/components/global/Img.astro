@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+
+interface IImgProps {
+  src: string;
+  alt: string;
+  className?: string;
+  width: number;
+  height: number;
+  isAstro: boolean;
+}
+
+const { src, alt, className = '', width, height, isAstro = true } = Astro.props as IImgProps;
+
+const imgSrc = `/src/assets/images/${src}`;
+---
+
+{
+  isAstro ? (
+    <Image src={imgSrc} alt={alt} class={className} width={width} height={height} />
+  ) : (
+    <img src={imgSrc} alt={alt} class={className} />
+  )
+}

@@ -1,0 +1,167 @@
+{
+  "img": "sections/faqs.svg",
+  "title": "Frequently Asked Questions",
+  "paragraph": "We want to make sure all of your questions are answered. Not finding your answers here? Please <a href='/contact-us'>Contact Us</a>.",
+  "tabs": {
+    "general": [
+      {
+        "title": "What is RTD HVAC?",
+        "paragraph": "RTD HVAC is a heating and cooling contractor serving residential customers in the PA area."
+      },
+      {
+        "title": "What services does RTD HVAC offer?",
+        "paragraph": "We offer the following services to residential customers:\n\n- Forced-air furnace installation, repair, and maintenance\n- Central air conditioning installation, replacement, repair, and maintenance\n- Heat pump installation\n- Mini-split installation\n- New construction HVAC\n- Indoor air quality services"
+      },
+      {
+        "title": "What's RTD HVAC's phone number?",
+        "paragraph": "RTD HVAC main phone number is [(267) 471-3580](tel:2674713580)."
+      },
+      {
+        "title": "Does RTD HVAC offer free estimates?",
+        "paragraph": "RTD HVAC offers free estimates as well as free second opinions for HVAC installations in the PA area. Whether you’re looking to install an energy efficient heat pump or replacing your existing furnace or conditioner with another system that helps you save money, our free estimate is an easy and fast way to get durable equipment at a low cost."
+      },
+      {
+        "title": "How does scheduling work with RTD HVAC?",
+        "paragraph": "You can give us a call at [(267) 471-3580](tel:2674713580) or request an appointment online. We’ll be in touch to confirm the appointment. All appointments are scheduled in 2-hour windows with text notification when we head your way."
+      }
+    ],
+    "furnaces": [
+      {
+        "title": "Furnace is not turning on",
+        "paragraph": "Forced Air Furnaces have many moving parts & electronic boards that fail for a variety of reasons. If you have tried resetting the furnace and it does not come back on, it needs to be fully checked by an HVAC professional."
+      },
+      {
+        "title": "Furnace is short cycling (constant on/off)",
+        "paragraph": "#1 reason for short cycling is a dirty filter, which will damage the furnace & its sensors over time.\n\n- Change the air filter. The most common cause of short cycling is a dirty filter.\n- If your filter was dirty and replaced, it should work normally.\n- If a filter change didn’t do the trick, your system needs to be professionally inspected."
+      },
+      {
+        "title": "Furnace is not heating",
+        "paragraph": "Follow these steps to trouble shoot the furnace:\n\n\n- Make sure heating is turned on in the thermostat\n- Check to see if the furnace blower is running (air coming out of the vents)\n- Check to see if the indoor AC coil (on top of the furnace) is leaking or freezing\n- Based on your troubleshooting, read our other answers below."
+      },
+      {
+        "title": "Furnace is blowing cold air",
+        "paragraph": "This is usually caused by deferred maintenance and caused by dirty sensors or malfunctioning parts. Other causes are gas pressure issues, broken inducer draft motors, crossed wiring, bad thermostats or blocked flues. We recommend scheduling a furnace repair."
+      },
+      {
+        "title": "No air from the vents",
+        "paragraph": "This means your furnace is not able to start. Your system has to be professionally inspected & diagnosed."
+      },
+      {
+        "title": "Water / Leak near furnace",
+        "paragraph": "Leaks happen for a variety of reasons such as:\n\n- Indoor coil freezing which is caused by a dirty filter or malfunctioning AC unit\n- Drain pipe failure or misalignment\n- Condensate pump (for houses that don’t have a drain near the furnace) failing. Condensate pumps fail frequently with high usage & typically have to be replaced every 3-5 years.\n\n What to do when you notice a leak?\n\n- Investigate the origin\n- If water is coming from the indoor coil (typically installed on top of the furnace, part of the AC system), turn off cooling & turn fan on until the system is inspected. Keeping AC on while the indoor coil is leaking will lead to rusting & cracked heat exchangers in the furnace.\n- If water is coming from a drain pipe, make sure it’s aligned & draining properly. Drain pipes are typically white PVC pipes leading to a drain.\n- If water is coming from condensate pump, please make sure the pipes are inserted properly & determine if the pump is draining. If the condensate pump is not draining, it likely needs to be replaced."
+      },
+      {
+        "title": "The furnace is making strange noises",
+        "paragraph": "Is the hum different than usual?\n\n- Unusual humming or buzzing may be a sign of the blower motor, inducer draft motor or the blower assembly failing.\n- Loud bangs & vibrations are typically caused by wheel assembly or blower motor failure. Please keep system off until inspected.\n- Ensure the noise is not from your ductwork. Ductwork (sheet metal) expands & contracts with temprature differences. Ductwork noise is fairly common in winters.\n- Minor humming is alright, but if there’s a change in the sound profile of the unit, you may want to have it inspected."
+      },
+      {
+        "title": "How long do furnaces last?",
+        "paragraph": "Most residential gas furnaces are relatively durable and last anywhere between 10 to 20+ years, depending on maintenance and brand quality."
+      },
+      {
+        "title": "Should I repair or replace my furnace?",
+        "paragraph": "It depends. Most furnaces will need a few repairs over the years, but generally not major ones. If you’ve had multiple issues with the furnace in a short period of time, or if the furnace is past 10-15 years old, it’s likely best to consider replacement. Major repairs like cracked heat exchangers, bad inducer draft motors and corrosion are often signs that furnace replacement is needed."
+      },
+      {
+        "title": "What furnace brands are best?",
+        "paragraph": "Based on our experience and our love for durable appliances, we recommend Carrier and Trane/American Standard gas furnaces as the top quality units currently in the market."
+      }
+    ],
+    "air_conditioning": [
+      {
+        "title": "My air conditioner is not turning on",
+        "paragraph": "Common causes include a tripped breaker, blown capacitor or contactor  which can prevent the AC unit from starting. Start by checking the breaker and fuse box, then move to the thermostat settings. If those seem fine, call for professional repair."
+      },
+      {
+        "title": "My air conditioner is turning on and off",
+        "paragraph": "This issue, known as short cycling, can often be caused by a dirty air filter or refrigerant issues. Start by replacing your air filter. If the problem continues, it might be due to refrigerant leaks or other system issues. In that case, it’s best to have a professional check the ac unit."
+      },
+      {
+        "title": "My air conditioner is blowing warm air",
+        "paragraph": "If your air conditioner is blowing warm air, it could be due to low refrigerant, a dirty air filter, or issues with the compressor or evaporator coil. Start by checking and replacing the air filter. If the problem continues, call for professional AC repair."
+      },
+      {
+        "title": "My air conditioner is leaking water inside",
+        "paragraph": "One of the most common causes of indoor AC leaks is a clogged condensate drain line, which can be cleared with a vacuum or a pipe cleaner. Another common cause is low refrigerant levels, leading to coil freezing and subsequent thawing, can also cause leaks. Last cause is a dirty air filter which causes the indoor AC unit to freeze. Make sure your filter is clear and unobstructed. If the simple fixes don’t work, it’s best to call a professional to inspect and repair the system."
+      },
+      {
+        "title": "My air conditioner is loud",
+        "paragraph": "A loud air conditioner can often indicate that the compressor is overworking or nearing failure. Another common cause is a dirty outdoor unit, which can obstruct airflow and force the system to work harder. Other common causes include low refrigerant, dirty air filters and low air flow inside the house."
+      },
+      {
+        "title": "How long do air conditioners last?",
+        "paragraph": "On average, air conditioners last about 10-15 years with proper maintenance. However, their lifespan can be affected by how often they’re used, how well they’re maintained, and the local climate. To maximize the life of your unit, regular servicing is essential. This includes cleaning the coils, checking refrigerant levels, and making sure all components are functioning correctly. Consistent maintenance can help your air conditioner run efficiently and last longer."
+      },
+      {
+        "title": "Should I repair or replace my air conditioner?",
+        "paragraph": "It depends. Most air conditioners will need a few repairs over the years, but generally not major ones. If you’ve had multiple issues with the air conditioner in a short period of time, or if the unit is past 10-15 years old, it’s likely best to consider replacement. Major repairs like compressor failure, significant refrigerant leaks, or extensive corrosion are often signs that replacement is needed. Additionally, newer models are more energy-efficient, which can save money on energy bills in the long run."
+      },
+      {
+        "title": "What air conditioner brands are best?",
+        "paragraph": "Based on our decades of experience in the HVAC industry and our love for durable equipment, we recognize Carrier and Trane/American Standard as the best brands of Air conditioning units sold in the United States."
+      }
+    ],
+    "heatpumps": [
+      {
+        "title": "What is a heat pump?",
+        "paragraph": "In the most simplified terms, an AC unit that can also absorb heat from the outside using electricity in addition to providing cooling in the summer."
+      },
+      {
+        "title": "What type of heat pump is best for me?",
+        "paragraph": "If you have a gas furnace & AC, best way would be a dual fuel air source heat pump using your existing ducts.\n If you do not have a central system, Minisplits are often the most cost effective"
+      },
+      {
+        "title": "Should I get a heat pump?",
+        "paragraph": "If you care about environmental sustainibility & are looking to modernize your HVAC system, yes. The incentives are very good & historically high. It all depends on your preference & budget."
+      },
+      {
+        "title": "What's the difference between air source & mini split heatpumps?",
+        "paragraph": "Air Source Heat pumps\n\n- Typically retrofitted to existing forced-air gas furnaces in houses that have ductwork\n- Airsource heat pumps require ductwork\n\nMiniSplit Heat pumps\n\n- Typically installed in houses with no ductwork or central system\n- Minisplit indoor units can be installed on the wall or floor & do not require ductwork"
+      },
+      {
+        "title": "What's the difference between dual fuel & cold climate heat pumps?",
+        "paragraph": "Dual Fuel\n\n- Typically uses a gas furnace backup\n- Heat pump generates heat up to approx 30 degrees ambient\n- Below 30, gas furnace kicks on\n\nCold Climate\n\n- Typically uses an electric furnace or airhandler\n- Usually 18SEER+\n- Heat pump generates heat up to approx 0 to -13 degrees ambient\n- Below the operating temp, electric furnace kicks on"
+      },
+      {
+        "title": "What heat pump brands are best?",
+        "paragraph": "Based on our decades of experience in the HVAC industry and our love for durable equipment, we recognize Carrier and Trane/American Standard as the best brands of heat pump units sold in the United States."
+      }
+    ],
+    "minisplits": [
+      {
+        "title": "What is a MiniSplit?",
+        "paragraph": "A MiniSplit is a system designed for properties with no ductwork (although ducted minisplit united are available).\n\nMiniSplits consist of indoor unit(s) + outdoor condenser.\n\nIndoor units come in varieties of:\n- Wall units (most common)\n- Floor units (for slanted walls)\n- Ceiling or Cassette Units (new construction)\n- Ducted Airhandlers (new construction)"
+      },
+      {
+        "title": "Do MiniSplits do both heating & cooling?",
+        "paragraph": "Three varities of MiniSplits:\n\nCooling Only\n- Only provides cooling\n- Single-zone\n\nHeating + Cooling\n- Cooling\n- Heating up to around 20 degrees F\n- Single or multi-zone\n\nHyperheat / Cold Climate:\n- Cooling\n- Heating at all temperatures\n- Single or Multi Zone"
+      },
+      {
+        "title": "What's the difference between a regular heat pump & hyperheat?",
+        "paragraph": "Regular MiniSplit Heatpumps\n- Heating rated up to 13-20 degrees F, but recommended to switch heating off around 30 degrees F\n- Cooling\n\nHyper Heat / Cold Climate\n- Heating at all tempratures\n- Cooling"
+      },
+      {
+        "title": "What's the difference between air source & minisplit heat pumps?",
+        "paragraph": "Air Source Heat pumps\n- Typically retrofitted to existing forced-air gas furnaces in houses that have ductwork\n- Airsource heatpumps require ductwork\n\nMiniSplit Heat pumps\n- Typically installed in houses with no ductwork or central system\n- Minisplit indoor units can be installed on the wall or floor & do not require ductwork"
+      }
+    ],
+    "brands": [
+      {
+        "title": "What are the top HVAC manufacturers?",
+        "paragraph": "Carrier, Trane, Lennox, and Johnson Controls are among the top HVAC manufacturers known for their quality and range of products."
+      },
+      {
+        "title": "What brand of HVAC is the most reliable?",
+        "paragraph": "Carrier is often widely regarded as the most reliable HVAC brand in the HVAC industry due to its consistent performance, durability, and technological advancements followed by Trane and American Standard."
+      },
+      {
+        "title": "What is the best HVAC company to buy?",
+        "paragraph": "Mitsubishi is considered one of the best HVAC companies to buy from, especially for their energy-efficient and technologically advanced mini-split systems."
+      },
+      {
+        "title": "What is the longest lasting HVAC?",
+        "paragraph": "Trane HVAC systems are known for their longevity, often lasting 15-20 years with proper maintenance, making them one of the longest-lasting options available. Carrier comes at a very close second with top-notch engineering."
+      }
+    ]
+  }
+}

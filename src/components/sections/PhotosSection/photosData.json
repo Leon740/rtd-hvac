@@ -1,0 +1,14 @@
+{
+  "img": "sections/photos.svg",
+  "title": "Photos of Work",
+  "images": [
+    "works/works_1.png",
+    "works/works_2.png",
+    "works/works_3.png",
+    "works/works_4.png",
+    "works/works_5.png",
+    "works/works_6.png",
+    "works/works_7.png",
+    "works/works_8.png"
+  ]
+}

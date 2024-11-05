@@ -1,0 +1,32 @@
+---
+import BRANDS_DATA from './brandsData.json';
+import SectionHeader from '@components/global/SectionHeader.astro';
+import Img from '@components/global/Img.astro';
+import LinkSecondary from '@components/global/LinkSecondary.astro';
+---
+
+<div class='section-pt-128-flex-64'>
+  <SectionHeader img={BRANDS_DATA.img} title={BRANDS_DATA.title} />
+
+  <div
+    class='bg-white xl:bg-transparent container max-w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl'
+  >
+    <ul class='xl:bg-white flex flex-row flex-wrap'>
+      {
+        BRANDS_DATA.images.map((img) => (
+          <li class='p-16 flex-center w-1/4 md:w-[12.5%]'>
+            <Img src={img} alt='RTD HVAC Brands' className='w-full' isAstro={false} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class='container'>
+    <LinkSecondary
+      href={BRANDS_DATA.button.href}
+      label={BRANDS_DATA.button.label}
+      isExternal={false}
+    />
+  </div>
+</div>

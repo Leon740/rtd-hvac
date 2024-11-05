@@ -1,0 +1,33 @@
+{
+  "img": "sections/reviews.svg",
+  "title": "Hundreds of <span class='text-red-500'>Happy Homes</span>",
+  "googleImg": "reviews/google.svg",
+  "starImg": "reviews/star.svg",
+  "reviews": [
+    {
+      "title": "Exceptional all around",
+      "paragraph": "Everyone on the team is knowledgable. I felt empowered to make good choices for our systems. The installers treated our home with the utmost respect. Everyone was friendly and polite. All my requests were taken seriously. The work was expertly performed with precision detailing. I can’t recommend RTD HVAC highly enough!",
+      "author": "Jeff D."
+    },
+    {
+      "title": "Honest and trustworthy",
+      "paragraph": "I had a bad AC and had four companies come to offer solutions. In the end, RTD HVAC had the best price, equipment and knowledge to get the job done right. I ended up going with a new Heat Pump system because of all the rebates, and the system works great, even when it is 100 degrees outside. The installation crew was great and made sure everything was pristine before they left. Price was important, but above all I trusted their honesty and knowledge more than anything else.",
+      "author": "Paul W."
+    },
+    {
+      "title": "Fantastic to work with from start to finish!",
+      "paragraph": "I made the jump to have a heat pump installed and looked at a few different contractors. RTD HVAC was always the quickest to respond, took the time to thoroughly answer all of my questions, and listened to all of my considerations and wants when they designed my heating and cooling solution - and the energy credit process, and city inspection post-install, was incredibly smooth and they handled all of it.",
+      "author": "Matt D."
+    },
+    {
+      "title": "Professional, accommodating and very competent",
+      "paragraph": "About a year ago, RTD HVAC installed a mini split for me and recently installed an air heat pump. Both installs were flawless. They are professional, accommodating and very competent. When our upstairs air conditioner went out in 95 degree weather and needed to be replaced, they were able to install a new heat pump in less than a week despite being super busy and provided us with a temporary portable A/C in the meantime. I highly recommend this company!",
+      "author": "Lisa F."
+    },
+    {
+      "title": "Did a great job",
+      "paragraph": "They were also able to schedule the installation quickly and the installation team did a great job, were courteous, and cleaned up afterwards. I'd definitely recommend them and we'll definitely work with them if we have future HVAC needs!",
+      "author": "Jon L."
+    }
+  ]
+}

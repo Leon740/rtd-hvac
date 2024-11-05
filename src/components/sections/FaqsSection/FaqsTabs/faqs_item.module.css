@@ -1,0 +1,7 @@
+.faqs-p {
+  @apply leading-loose;
+
+  ul {
+    @apply pl-16 list-disc;
+  }
+}

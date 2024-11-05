@@ -1,0 +1,10 @@
+---
+interface IIconProps {
+  icon: 'arrow' | 'bars' | 'calendar';
+  className?: string;
+}
+
+const { icon, className = '' } = Astro.props as IIconProps;
+---
+
+<i class={`icon-${icon} ${className}`}></i>

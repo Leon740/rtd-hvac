@@ -1,0 +1,21 @@
+---
+interface ILinkProps {
+  href: string;
+  isExternal: boolean;
+  className?: string;
+}
+
+const { href, isExternal = false, className = '' } = Astro.props as ILinkProps;
+---
+
+{
+  isExternal ? (
+    <a href={href} class={className} target='_blank' rel='noopener norefferer'>
+      <slot />
+    </a>
+  ) : (
+    <a href={href} class={className}>
+      <slot />
+    </a>
+  )
+}

@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  p a {
+    @apply text-red-500;
+
+    &:hover {
+      @apply underline;
+    }
+  }
+
+  a,
+  button,
+  [class^="icon-"] {
+    @apply transition-all;
+  }
+}
+
+@layer utilities {
+  /* section */
+  .section-pt-128 {
+    @apply pt-128;
+  }
+
+  .section-pt-128-flex-64 {
+    @apply section-pt-128 flex flex-col gap-64;
+  }
+  
+  /* flex */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  /* text */
+  .text-h3,
+  .text-20-bold {
+    @apply text-20 font-inter-bold;
+  }
+
+  .text-16-bold {
+    @apply text-16 font-inter-bold;
+  }
+
+  .text-p,
+  .text-16-regular {
+    @apply text-16 leading-relaxed;
+  }
+}

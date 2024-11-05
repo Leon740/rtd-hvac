@@ -1,0 +1,30 @@
+---
+import '../assets/css/index.css';
+import PagesNav from '@components/global/PagesNav/PagesNav.astro';
+import Footer from '../components/global/Footer/Footer.astro';
+
+interface Props {
+  title: string;
+  isPagesNav?: boolean;
+}
+
+const { title, isPagesNav = true } = Astro.props;
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='description' content='Astro description' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{`RTD HVAC ${title}`}</title>
+  </head>
+  <body class='font-inter-regular bg-zinc-50 text-stone-800'>
+    <slot />
+
+    {isPagesNav ? <PagesNav /> : <div class='pt-128' />}
+    <Footer />
+  </body>
+</html>

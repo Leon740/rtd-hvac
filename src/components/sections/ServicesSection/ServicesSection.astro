@@ -1,0 +1,42 @@
+---
+import SERVICES_DATA from './servicesData.json';
+import SectionHeader from '@components/global/SectionHeader.astro';
+import Img from '@components/global/Img.astro';
+
+interface IServicesItem {
+  img: string;
+  title: string;
+  paragraph: string;
+}
+
+type TServicesListByType = 'red' | 'blue' | 'yellow';
+---
+
+<div class='section-pt-128-flex-64'>
+  <SectionHeader img={SERVICES_DATA.img} title={SERVICES_DATA.title} />
+
+  <div class='container'>
+    <ul class='flex flex-col -m-16 flex-wrap lg:flex-row'>
+      {
+        (['red', 'blue', 'yellow'] as TServicesListByType[]).map((type) =>
+          SERVICES_DATA[type].map(({ img, title, paragraph }: IServicesItem) => (
+            <li class='w-full lg:w-1/2 xl:w-1/3 p-16'>
+              <section
+                aria-label={title}
+                class={`h-full p-32 rounded-16 flex flex-col gap-16
+                  ${type === 'red' ? 'bg-red-300' : ''}
+                  ${type === 'blue' ? 'bg-blue-300' : ''}
+                  ${type === 'yellow' ? 'bg-yellow-300' : ''}
+                  `}
+              >
+                <Img src={img} alt={title} width={64} height={64} />
+                <h3 class='text-h3'>{title}</h3>
+                <p class='text-p'>{paragraph}</p>
+              </section>
+            </li>
+          ))
+        )
+      }
+    </ul>
+  </div>
+</div>
