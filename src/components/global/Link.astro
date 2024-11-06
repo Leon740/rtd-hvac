@@ -1,21 +1,35 @@
 ---
-interface ILinkProps {
-  href: string;
+interface ILinkMinProps {
+  tag: 'a' | 'button';
+  buttonType: 'button' | 'submit';
+  href?: string;
   isExternal: boolean;
   className?: string;
 }
 
-const { href, isExternal = false, className = '' } = Astro.props as ILinkProps;
+const {
+  tag,
+  buttonType = 'button',
+  href,
+  isExternal = false,
+  className = ''
+} = Astro.props as ILinkMinProps;
 ---
 
 {
-  isExternal ? (
-    <a href={href} class={className} target='_blank' rel='noopener norefferer'>
-      <slot />
-    </a>
+  tag === 'a' && href ? (
+    isExternal ? (
+      <a href={href} class={className} target='_blank' rel='noopener norefferer'>
+        <slot />
+      </a>
+    ) : (
+      <a href={href} class={className}>
+        <slot />
+      </a>
+    )
   ) : (
-    <a href={href} class={className}>
+    <button type={buttonType} class={className}>
       <slot />
-    </a>
+    </button>
   )
 }
