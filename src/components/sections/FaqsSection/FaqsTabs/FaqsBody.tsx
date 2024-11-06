@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import { FaqsItem, type IFaqsItem, type IFaqsItemProps } from './FaqsItem';
+import { FaqsItem, type IFaqsItem } from './FaqsItem';
 
 interface IFaqsBodyProps {
   tabKey: string;

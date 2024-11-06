@@ -33,7 +33,7 @@ const { isScroll = false } = Astro.props as IReviewsSectionProps;
                 <Img src={REVIEWS_DATA.googleImg} alt='RTD HVAC Reviews' width={16} height={16} />
 
                 <ul class='flex flex-row gap-8'>
-                  {[0, 1, 2, 3, 4].map((star) => (
+                  {[0, 1, 2, 3, 4].map(() => (
                     <li>
                       <Img src={REVIEWS_DATA.starImg} alt='Star' width={16} height={16} />
                     </li>

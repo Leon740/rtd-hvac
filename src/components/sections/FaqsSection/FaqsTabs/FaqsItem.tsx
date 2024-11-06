@@ -2,6 +2,7 @@ import { marked } from 'marked';
 import faqsItemStyles from './faqs_item.module.css';
 import { useEffect, useRef } from 'preact/hooks';
 import { useWindowSize } from '@hooks/useWindowSize';
+import { Icon } from '@components/global/Icon';
 
 export interface IFaqsItem {
   title: string;
@@ -50,13 +51,13 @@ export function FaqsItem({
       >
         <span className="text-left">{title}</span>
 
-        <i className={`icon-arrow ${isActive ? '-rotate-90' : 'rotate-90'}`} />
+        <Icon icon="arrow" className={`${isActive ? '-rotate-90' : 'rotate-90'}`} />
       </button>
 
       <div className="overflow-hidden transition-all" ref={faqsItemBodyRf}>
         <div
           className={`px-16 pb-16 xl:px-32 xl:pb-32 text-p faqs-p ${faqsItemStyles['faqs-p']}`}
-          dangerouslySetInnerHTML={{ __html: marked(paragraph) }}
+          dangerouslySetInnerHTML={{ __html: marked(paragraph) as string }}
         />
       </div>
     </>

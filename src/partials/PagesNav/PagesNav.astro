@@ -2,7 +2,7 @@
 import PAGES_NAV_DATA from './pagesNavData.json';
 import Img from '@components/global/Img.astro';
 import Link from '@components/global/Link.astro';
-import { Icon } from '@components/global/Icon';
+import Icon from '@components/global/Icon.astro';
 
 interface IPageItem {
   title: string;
@@ -27,7 +27,7 @@ interface IPageItem {
               href={href}
               className='w-48 h-48 flex-center rounded-full border-2 border-red-500 text-red-500 text-16 hover:text-white hover:bg-red-500'
             >
-              <Icon icon='arrow' client:only='preact' />
+              <Icon icon='arrow' className='text-16' />
             </Link>
             <Img src={img} alt={title} width={48} height={48} />
           </div>
