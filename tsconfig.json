@@ -4,7 +4,14 @@
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@hooks/*": ["src/hooks/*"],
+      "@partials/*": ["src/partials/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@css/*": ["src/css/*"],
+      "react": ["./node_modules/preact/compat/"],
+      "react/jsx-runtime": ["./node_modules/preact/jsx-runtime"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "react-dom/*": ["./node_modules/preact/compat/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact"

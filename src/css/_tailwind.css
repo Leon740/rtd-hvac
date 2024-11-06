@@ -13,8 +13,14 @@
 
   a,
   button,
+  input,
   [class^="icon-"] {
     @apply transition-all;
+  }
+
+  label {
+    user-select: none;
+    cursor: pointer;
   }
 }
 
