@@ -1,0 +1,16 @@
+---
+import APPOINTMENT_DATA from './appointmentData.json';
+import SectionHeader from '@partials/SectionHeader.astro';
+import { AppointmentForm } from './AppointmentForm';
+import '@css/datepicker.css';
+---
+
+<div class='section-pt-128-flex-64'>
+  <SectionHeader
+    img={APPOINTMENT_DATA.img}
+    title={APPOINTMENT_DATA.title}
+    paragraph={APPOINTMENT_DATA.paragraph}
+  />
+
+  <AppointmentForm client:only='preact' />
+</div>

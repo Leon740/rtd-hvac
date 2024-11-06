@@ -1,0 +1,15 @@
+---
+import CONTACTS_DATA from './contactsData.json';
+import SectionHeader from '@partials/SectionHeader.astro';
+import { ContactsForm } from './ContactsForm';
+---
+
+<div class='section-pt-128-flex-64'>
+  <SectionHeader
+    img={CONTACTS_DATA.img}
+    title={CONTACTS_DATA.title}
+    paragraph={CONTACTS_DATA.paragraph}
+  />
+
+  <ContactsForm client:only='preact' />
+</div>
