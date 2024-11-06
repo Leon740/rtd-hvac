@@ -1,5 +1,6 @@
 ---
 import '@css/index.css';
+import Header from '@partials/Header/Header.astro';
 import PagesNav from '@partials/PagesNav/PagesNav.astro';
 import Footer from '@partials/Footer/Footer.astro';
 
@@ -44,7 +45,9 @@ const { title, isPagesNav = true } = Astro.props;
     <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
     <link rel='manifest' href='/favicon/site.webmanifest' />
   </head>
-  <body class='font-inter-regular bg-zinc-50 text-stone-800'>
+  <body class='font-inter-regular bg-body text-stone-800'>
+    <Header />
+
     <slot />
 
     {isPagesNav ? <PagesNav /> : <div class='pt-128' />}

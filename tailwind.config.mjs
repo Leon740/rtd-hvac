@@ -33,7 +33,8 @@ export default {
         full: '50%'
       },
       zIndex: {
-        sticky: '10'
+        10: '10',
+        100: '100'
       }
     }
   },

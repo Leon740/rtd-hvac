@@ -33,6 +33,11 @@
   .section-pt-128-flex-64 {
     @apply section-pt-128 flex flex-col gap-64;
   }
+
+  /* background */
+  .bg-body {
+    @apply bg-zinc-100
+  }
   
   /* flex */
   .flex-center {

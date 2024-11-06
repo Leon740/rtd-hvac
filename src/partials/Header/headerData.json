@@ -1,0 +1,44 @@
+{
+  "links": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Reviews",
+      "href": "/reviews"
+    },
+    {
+      "label": "Brands",
+      "href": "/brands"
+    },
+    {
+      "label": "Photos",
+      "href": "/photos"
+    },
+    {
+      "label": "FAQs",
+      "href": "/faqs"
+    },
+    {
+      "label": "Contact Us",
+      "href": "/contact-us"
+    }
+  ],
+  "buttons": [
+    {
+      "icon": "mobile",
+      "label": "Free Estimate",
+      "href": "/contact-us"
+    },
+    {
+      "icon": "calendar",
+      "label": "Request an appointment",
+      "href": "/appointment"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 interface IIconProps {
-  icon: 'arrow' | 'bars' | 'calendar';
+  icon: 'arrow' | 'bars' | 'mobile' | 'calendar';
   className?: string;
 }
 

@@ -1,8 +1,8 @@
-import { Children, type ReactNode } from 'preact/compat';
+import { type ReactNode } from 'preact/compat';
 
 interface ILinkMinProps {
   tag: 'a' | 'button';
-  buttonType: 'button' | 'submit';
+  buttonType?: 'button' | 'submit';
   href?: string;
   isExternal: boolean;
   className?: string;

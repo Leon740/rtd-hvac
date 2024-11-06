@@ -97,7 +97,7 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
       {/* pt-48 -> 64 - tabHeader py-16 = 48 */}
       {/* gap-16 -> 32 - tabHeader py-16 = 16 */}
 
-      <ul className="flex flex-row gap-32 py-16 sticky top-0 z-sticky bg-zinc-50 overflow-auto">
+      <ul className="flex flex-row gap-32 py-16 sticky z-10 top-[177px] md:top-[137px] bg-body overflow-auto">
         {tabsKeys.map((tabKey) => {
           const tabColors = COLORS[tabKey as TTabKey];
 
