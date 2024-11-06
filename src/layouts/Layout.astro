@@ -19,7 +19,6 @@ const { title, isPagesNav = true } = Astro.props;
     <meta name='generator' content={Astro.generator} />
 
     <!-- Seo -->
-    <!-- TODO: opengraph -->
     <title>{`RTD HVAC ${title}`}</title>
     <meta
       name='keywords'
@@ -29,6 +28,14 @@ const { title, isPagesNav = true } = Astro.props;
       name='description'
       content='RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades.'
     />
+    <meta property='og:title' content='RTD HVAC - Professional HVAC Services in Pennsylvania' />
+    <meta
+      property='og:description'
+      content='RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades.'
+    />
+    <meta property='og:image' content='/images/global/opengraph.jpg' />
+    <meta property='og:url' content='https://rtdhvac.com' />
+    <meta property='og:type' content='website' />
 
     <!-- Favicon -->
     <link rel='icon' href='/favicon/favicon.ico' type='image/x-icon' />
