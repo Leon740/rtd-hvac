@@ -1,0 +1,19 @@
+---
+import NOT_FOUND_DATA from './notFoundData.json';
+import SectionHeader from '@partials/SectionHeader.astro';
+---
+
+<div class='section-pt-128'>
+  <SectionHeader
+    img={NOT_FOUND_DATA.img}
+    title={NOT_FOUND_DATA.title}
+    paragraph={NOT_FOUND_DATA.paragraph}
+    className='items-center text-center'
+  />
+</div>
+
+<script>
+  setTimeout(() => {
+    window.location.href = '/';
+  }, 2000);
+</script>

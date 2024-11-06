@@ -5,12 +5,13 @@ interface ISectionHeaderProps {
   img: string;
   title: string;
   paragraph?: string;
+  className?: string;
 }
 
-const { img, title, paragraph } = Astro.props as ISectionHeaderProps;
+const { img, title, paragraph, className = '' } = Astro.props as ISectionHeaderProps;
 ---
 
-<div class='container flex flex-col gap-32'>
+<div class={`container flex flex-col gap-32 ${className}`}>
   <Img
     src={img}
     alt={title.replace("<span class='text-red-500'>", '').replace('</span>', '')}
