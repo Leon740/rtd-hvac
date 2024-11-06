@@ -15,7 +15,12 @@ interface INavItem {
     {
       SOCIAL_NAV_DATA.map(({ label, href, img }: INavItem) => (
         <li class='w-full lg:w-1/4'>
-          <Link href={href} className='flex flex-row items-center gap-16' isExternal>
+          <Link
+            tag='a'
+            href={href}
+            className='flex flex-row items-center gap-16 hover:text-red-500'
+            isExternal
+          >
             <Img src={img} alt={label} width={24} height={24} />
             <span class='text-p'>{label}</span>
           </Link>
