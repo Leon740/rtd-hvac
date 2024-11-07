@@ -51,23 +51,27 @@ export function ContactsForm() {
   ];
 
   const handleSubmit = async (values: IValues, actions: FormikHelpers<IValues>) => {
-    // TODO
-    const response = await fetch('https://formspree.io/f/mldrdawb', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(values)
-    });
-    console.log(JSON.stringify(values));
+    try {
+      const formData = new FormData();
+      Object.entries(values).forEach(([key, value]) => {
+        formData.append(key, value);
+      });
+      formData.append('form-name', 'contact');
 
-    if (response.ok) {
-      alert('Message sent!');
-      window.location.href = '/';
-      actions.resetForm();
-    } else {
-      alert('Failed to send message.');
-      actions.resetForm();
+      const response = await fetch('/', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (response.ok) {
+        alert('Message sent!');
+        actions.resetForm();
+        window.location.href = '/';
+      } else {
+        alert('Failed to send message.');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
     }
   };
 
@@ -97,8 +101,15 @@ export function ContactsForm() {
         onSubmit={(values: IValues, actions) => handleSubmit(values, actions)}
       >
         {({ errors, touched }) => (
-          <Form className="w-full xl:w-1/2 flex flex-col gap-64">
+          <Form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            className="w-full xl:w-1/2 flex flex-col gap-64"
+          >
             <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
+              <input type="hidden" name="form-name" value="contact" />
+
               {INPUTS.map(({ as, name, type, isRequired, placeholder, mask }: IInput) => (
                 <FormInput
                   key={`ContactsForm_FormInput_${name}`}
