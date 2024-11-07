@@ -107,9 +107,9 @@ export function ContactsForm() {
             data-netlify="true"
             className="w-full xl:w-1/2 flex flex-col gap-64"
           >
-            <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
-              <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contact" />
 
+            <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
               {INPUTS.map(({ as, name, type, isRequired, placeholder, mask }: IInput) => (
                 <FormInput
                   key={`ContactsForm_FormInput_${name}`}
