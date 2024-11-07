@@ -62,11 +62,13 @@ export function ContactsForm() {
         method: 'POST',
         body: formData
       });
+      console.log(formData);
+      console.log(response);
 
       if (response.ok) {
         alert('Message sent!');
         actions.resetForm();
-        window.location.href = '/';
+        // window.location.href = '/';
       } else {
         alert('Failed to send message.');
       }
