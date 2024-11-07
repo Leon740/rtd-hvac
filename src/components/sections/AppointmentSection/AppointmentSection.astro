@@ -12,5 +12,18 @@ import '@css/datepicker.css';
     paragraph={APPOINTMENT_DATA.paragraph}
   />
 
+  <form name='appointment' data-netlify='true' netlify-honeypot='bot-field' hidden>
+    <input type='text' name='name' />
+    <input type='email' name='email' />
+    <input type='text' name='mobile' />
+    <textarea name='message'></textarea>
+    <input type='text' name='contact' />
+    <input type='text' name='street' />
+    <input type='text' name='city' />
+    <input type='text' name='state' />
+    <input type='text' name='zip' />
+    <input type='text' name='date' />
+  </form>
+
   <AppointmentForm client:only='preact' />
 </div>
