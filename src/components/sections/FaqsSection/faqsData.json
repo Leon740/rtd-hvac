@@ -1,7 +1,7 @@
 {
   "img": "sections/faqs.svg",
   "title": "Frequently Asked Questions",
-  "paragraph": "We want to make sure all of your questions are answered. Not finding your answers here? Please <a href='/contact-us'>Contact Us</a>.",
+  "paragraph": "We want to make sure all of your questions are answered. Not finding your answers here? Please [Contact Us](/contacts).",
   "tabs": {
     "general": [
       {

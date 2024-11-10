@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'preact/hooks';
-import { FaqsBody } from './FaqsBody';
+import { FaqsTabBody } from './FaqsTabBody';
 import { type IFaqsItem } from './FaqsItem';
 
 export type TTabKey =
@@ -102,7 +102,7 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
           const tabColors = COLORS[tabKey as TTabKey];
 
           return (
-            <li key={`FaqsTabs_TabHeader_${tabKey}`} className="flex-shrink-0">
+            <li key={`FaqsTabHeader_${tabKey}`} className="flex-shrink-0">
               <button
                 type="button"
                 className={`text-16-regular capitalize py-8 px-16 rounded-16 ${tabColors.background} border-2 ${tabKey === activeTabKeySt ? tabColors.activeBorder : tabColors.border}`}
@@ -120,8 +120,8 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
           const tabColors = COLORS[tabKey as TTabKey];
 
           return (
-            <FaqsBody
-              key={`FaqsTabs_TabBody_${tabKey}`}
+            <FaqsTabBody
+              key={`FaqsTabBody_${tabKey}`}
               tabKey={tabKey}
               activeItemColor={tabColors.activeColor}
               hoverItemColor={tabColors.hoverColor}

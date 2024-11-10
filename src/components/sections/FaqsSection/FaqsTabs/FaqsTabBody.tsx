@@ -1,14 +1,14 @@
 import { useState } from 'preact/hooks';
 import { FaqsItem, type IFaqsItem } from './FaqsItem';
 
-interface IFaqsBodyProps {
+interface IFaqsTabBodyProps {
   tabKey: string;
   activeItemColor: string;
   hoverItemColor: string;
   faqs: IFaqsItem[];
 }
 
-export function FaqsBody({ tabKey, activeItemColor, hoverItemColor, faqs }: IFaqsBodyProps) {
+export function FaqsTabBody({ tabKey, activeItemColor, hoverItemColor, faqs }: IFaqsTabBodyProps) {
   const initialActiveItemId = `${tabKey}_0`;
   const [activeItemIdSt, setActiveItemIdSt] = useState<string>(initialActiveItemId);
 
@@ -22,7 +22,7 @@ export function FaqsBody({ tabKey, activeItemColor, hoverItemColor, faqs }: IFaq
         const itemId = `${tabKey}_${index}`;
 
         return (
-          <li key={`FaqsBody_${tabKey}_FaqsItem_${title}`} className="bg-white rounded-16">
+          <li key={`FaqsItem_${title}`} className="bg-white rounded-16">
             <FaqsItem
               handleOnClick={() => handleFaqsItemOnClick(itemId)}
               isActive={activeItemIdSt === itemId}
