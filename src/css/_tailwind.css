@@ -13,8 +13,7 @@
 
   a,
   button,
-  input,
-  [class^="icon-"] {
+  input {
     @apply transition-all;
   }
 
