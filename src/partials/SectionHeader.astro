@@ -1,5 +1,6 @@
 ---
 import Img from '@components/global/Img.astro';
+import { marked } from 'marked';
 
 interface ISectionHeaderProps {
   img: string;
@@ -20,6 +21,6 @@ const { img, title, paragraph, className = '' } = Astro.props as ISectionHeaderP
   />
   <section class='flex flex-col gap-16'>
     <h2 class='text-32 font-inter-bold' set:html={title} />
-    {paragraph && <p class='text-20 leading-relaxed' set:html={paragraph} />}
+    {paragraph && <div class='text-20 leading-relaxed' set:html={marked(paragraph)} />}
   </section>
 </div>
