@@ -42,8 +42,6 @@ export function FaqsItem({
     }
   }, [isActive, windowWidth])
 
-  console.log('test')
-
   return (
     <>
       <button
