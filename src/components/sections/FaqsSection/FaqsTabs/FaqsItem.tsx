@@ -44,6 +44,7 @@ export function FaqsItem({
 
   console.log('test')
   console.log('test')
+  console.log('test')
 
   return (
     <>
