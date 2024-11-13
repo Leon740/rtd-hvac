@@ -43,6 +43,7 @@ export function FaqsItem({
   }, [isActive, windowWidth])
 
   console.log('test')
+  console.log('test')
 
   return (
     <>
