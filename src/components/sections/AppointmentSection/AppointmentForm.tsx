@@ -1,31 +1,31 @@
-import { Formik, Form, type FormikHelpers } from 'formik';
-import * as Yup from 'yup';
-import { FormInput } from '@components/global/FormInput';
-import { LinkRed } from '@components/global/LinkRed';
+import { Formik, Form, type FormikHelpers } from 'formik'
+import * as Yup from 'yup'
+import { FormInput } from '@components/global/FormInput'
+import { LinkRed } from '@components/global/LinkRed'
 
 export function AppointmentForm() {
   interface IValues {
-    name: string;
-    email: string;
-    mobile: string;
-    message: string;
-    contact: string;
-    street: string;
-    city: string;
-    state: string;
-    zip: string;
-    date: string;
+    name: string
+    email: string
+    mobile: string
+    message: string
+    contact: string
+    street: string
+    city: string
+    state: string
+    zip: string
+    date: string
   }
 
   interface IInput {
-    as?: 'input' | 'textarea' | 'select' | 'mobile' | 'date';
-    name: keyof IValues;
-    label?: string;
-    type: 'text' | 'email' | 'textarea';
-    isRequired: boolean;
-    placeholder?: string;
-    options?: string[];
-    mask?: string;
+    as?: 'input' | 'textarea' | 'select' | 'mobile' | 'date'
+    name: keyof IValues
+    label?: string
+    type: 'text' | 'email' | 'textarea'
+    isRequired: boolean
+    placeholder?: string
+    options?: string[]
+    mask?: string
   }
 
   const INPUTS: IInput[] = [
@@ -94,32 +94,33 @@ export function AppointmentForm() {
       isRequired: true,
       placeholder: '01/01/2024'
     }
-  ];
+  ]
 
   const handleSubmit = async (values: IValues, actions: FormikHelpers<IValues>) => {
     try {
-      const formData = new FormData();
+      const formData = new FormData()
       Object.entries(values).forEach(([key, value]) => {
-        formData.append(key, value);
-      });
-      formData.append('form-name', 'appointment');
+        formData.append(key, value)
+      })
+      formData.append('form-name', 'appointment')
 
       const response = await fetch('/', {
         method: 'POST',
         body: formData
-      });
+      })
 
       if (response.ok) {
-        alert('Message sent!');
-        actions.resetForm();
-        window.location.href = '/';
+        alert('Message sent!')
+        actions.resetForm()
+        window.location.href = '/'
       } else {
-        alert('Failed to send message.');
+        alert('Failed to send message.')
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      console.error('Form submission error:', error);
+      // console.error('Form submission error:', error)
     }
-  };
+  }
 
   return (
     <div className="container">
@@ -196,5 +197,5 @@ export function AppointmentForm() {
         )}
       </Formik>
     </div>
-  );
+  )
 }

@@ -1,23 +1,23 @@
-import { Formik, Form, type FormikHelpers } from 'formik';
-import * as Yup from 'yup';
-import { FormInput } from '@components/global/FormInput';
-import { LinkRed } from '@components/global/LinkRed';
+import { Formik, Form, type FormikHelpers } from 'formik'
+import * as Yup from 'yup'
+import { FormInput } from '@components/global/FormInput'
+import { LinkRed } from '@components/global/LinkRed'
 
 export function ContactsForm() {
   interface IValues {
-    name: string;
-    email: string;
-    mobile: string;
-    message: string;
+    name: string
+    email: string
+    mobile: string
+    message: string
   }
 
   interface IInput {
-    as?: 'input' | 'textarea' | 'select' | 'mobile';
-    name: keyof IValues;
-    type: 'text' | 'email' | 'textarea';
-    isRequired: boolean;
-    placeholder: string;
-    mask?: string;
+    as?: 'input' | 'textarea' | 'select' | 'mobile'
+    name: keyof IValues
+    type: 'text' | 'email' | 'textarea'
+    isRequired: boolean
+    placeholder: string
+    mask?: string
   }
 
   const INPUTS: IInput[] = [
@@ -48,32 +48,33 @@ export function ContactsForm() {
       isRequired: true,
       placeholder: 'Any questions or concerns? Share your thoughts with us.'
     }
-  ];
+  ]
 
   const handleSubmit = async (values: IValues, actions: FormikHelpers<IValues>) => {
     try {
-      const formData = new FormData();
+      const formData = new FormData()
       Object.entries(values).forEach(([key, value]) => {
-        formData.append(key, value);
-      });
-      formData.append('form-name', 'contact');
+        formData.append(key, value)
+      })
+      formData.append('form-name', 'contact')
 
       const response = await fetch('/', {
         method: 'POST',
         body: formData
-      });
+      })
 
       if (response.ok) {
-        alert('Message sent!');
-        actions.resetForm();
-        window.location.href = '/';
+        alert('Message sent!')
+        actions.resetForm()
+        window.location.href = '/'
       } else {
-        alert('Failed to send message.');
+        alert('Failed to send message.')
       }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      console.error('Form submission error:', error);
+      // console.error('Form submission error:', error)
     }
-  };
+  }
 
   return (
     <div className="container">
@@ -130,5 +131,5 @@ export function ContactsForm() {
         )}
       </Formik>
     </div>
-  );
+  )
 }

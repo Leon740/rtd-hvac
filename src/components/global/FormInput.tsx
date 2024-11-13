@@ -1,21 +1,21 @@
-import { type ReactNode } from 'react';
+import { type ReactNode } from 'react'
 
-import { Field, type FieldProps } from 'formik';
-import InputMask from 'react-input-mask';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import { Field, type FieldProps } from 'formik'
+import InputMask from 'react-input-mask'
+import DatePicker from 'react-datepicker'
+import 'react-datepicker/dist/react-datepicker.css'
 
 interface FormInputPropsI {
-  as: 'input' | 'textarea' | 'select' | 'mobile' | 'date' | undefined;
-  name: string;
-  label?: string;
-  type: 'text' | 'email' | 'textarea';
-  isRequired: boolean;
-  placeholder?: string;
-  error?: string;
-  touched?: boolean;
-  options?: string[];
-  mask?: string;
+  as: 'input' | 'textarea' | 'select' | 'mobile' | 'date' | undefined
+  name: string
+  label?: string
+  type: 'text' | 'email' | 'textarea'
+  isRequired: boolean
+  placeholder?: string
+  error?: string
+  touched?: boolean
+  options?: string[]
+  mask?: string
 }
 
 export function FormInput({
@@ -32,9 +32,9 @@ export function FormInput({
 }: FormInputPropsI) {
   const className = `text-16-regular outline-0 w-full bg-gray-100 py-8 px-16 border-2 border-gray-200 focus:border-red-500 rounded-8 ${
     type === 'textarea' ? 'resize-y h-128 max-h-256' : ''
-  }`;
+  }`
 
-  let Component: ReactNode;
+  let Component: ReactNode
 
   switch (as) {
     case 'select':
@@ -54,8 +54,8 @@ export function FormInput({
             </option>
           ))}
         </Field>
-      );
-      break;
+      )
+      break
     case 'mobile':
       Component = (
         <Field name={name}>
@@ -70,8 +70,8 @@ export function FormInput({
             />
           )}
         </Field>
-      );
-      break;
+      )
+      break
     case 'date':
       Component = (
         <Field name={name}>
@@ -87,14 +87,14 @@ export function FormInput({
               timeFormat="hh:mm aa" // Use 'hh:mm aa' for AM/PM format
               dateFormat="MMMM d, yyyy, h:mm aa"
               filterTime={(time) => {
-                const hours = time.getHours();
-                return hours >= 8 && hours <= 20; // Allows time from 8 AM to 8 PM
+                const hours = time.getHours()
+                return hours >= 8 && hours <= 20 // Allows time from 8 AM to 8 PM
               }}
             />
           )}
         </Field>
-      );
-      break;
+      )
+      break
     default:
       Component = (
         <Field
@@ -106,8 +106,8 @@ export function FormInput({
           aria-label={`${name} input`}
           className={className}
         />
-      );
-      break;
+      )
+      break
   }
 
   return (
@@ -121,5 +121,5 @@ export function FormInput({
 
       {error && touched && <p className="text-red-500">{error}</p>}
     </div>
-  );
+  )
 }
