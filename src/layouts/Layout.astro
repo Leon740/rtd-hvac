@@ -1,56 +1,56 @@
 ---
-import '@css/index.css';
-import Header from '@partials/Header/Header.astro';
-import PagesNav from '@partials/PagesNav/PagesNav.astro';
-import Footer from '@partials/Footer/Footer.astro';
+import '@css/index.css'
+import Header from '@partials/Header/Header.astro'
+import PagesNav from '@partials/PagesNav/PagesNav.astro'
+import Footer from '@partials/Footer/Footer.astro'
 
 interface Props {
-  title: string;
-  isPagesNav?: boolean;
+  title: string
+  isPagesNav?: boolean
 }
 
-const { title, isPagesNav = true } = Astro.props;
+const { title, isPagesNav = true } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
     <!-- Seo -->
     <title>{`RTD HVAC ${title}`}</title>
     <meta
-      name='keywords'
-      content='HVAC Pennsylvania, RTD HVAC, HVAC installation, HVAC repair, furnace installation, heat pump design, tankless water heaters, air conditioning repair, ductless minisplit systems, humidifiers, air cleaners, electrical panel upgrades'
+      name="keywords"
+      content="HVAC Pennsylvania, RTD HVAC, HVAC installation, HVAC repair, furnace installation, heat pump design, tankless water heaters, air conditioning repair, ductless minisplit systems, humidifiers, air cleaners, electrical panel upgrades"
     />
     <meta
-      name='description'
-      content='RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades.'
+      name="description"
+      content="RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades."
     />
-    <meta property='og:title' content='RTD HVAC - Professional HVAC Services in Pennsylvania' />
+    <meta property="og:title" content="RTD HVAC - Professional HVAC Services in Pennsylvania" />
     <meta
-      property='og:description'
-      content='RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades.'
+      property="og:description"
+      content="RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades."
     />
-    <meta property='og:image' content='/images/global/opengraph.jpg' />
-    <meta property='og:url' content='https://rtdhvac.com' />
-    <meta property='og:type' content='website' />
+    <meta property="og:image" content="/images/global/opengraph.jpg" />
+    <meta property="og:url" content="https://rtdhvac.com" />
+    <meta property="og:type" content="website" />
 
     <!-- Favicon -->
-    <link rel='icon' href='/favicon/favicon.ico' type='image/x-icon' />
-    <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
-    <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
-    <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-touch-icon.png' />
-    <link rel='manifest' href='/favicon/site.webmanifest' />
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
   </head>
-  <body class='font-inter-regular bg-body text-stone-800'>
+  <body class="font-inter-regular bg-body text-stone-800">
     <Header />
 
     <slot />
 
-    {isPagesNav ? <PagesNav /> : <div class='pt-128' />}
+    {isPagesNav ? <PagesNav /> : <div class="pt-128" />}
     <Footer />
   </body>
 </html>

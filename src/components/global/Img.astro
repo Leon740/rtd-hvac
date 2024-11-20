@@ -1,17 +1,18 @@
 ---
-import { Image } from 'astro:assets';
+// eslint-disable-next-line import/no-unresolved
+import { Image } from 'astro:assets'
 
 interface IImgProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width: number;
-  height: number;
+  src: string
+  alt: string
+  className?: string
+  width: number
+  height: number
 }
 
-const { src, alt, className = '', width, height } = Astro.props as IImgProps;
+const { src, alt, className = '', width, height } = Astro.props as IImgProps
 
-const imgSrc = `/images/${src}`;
+const imgSrc = `/images/${src}`
 ---
 
 <Image src={imgSrc} alt={alt} class={className} width={width} height={height} />

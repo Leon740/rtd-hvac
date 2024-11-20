@@ -1,33 +1,33 @@
 ---
-import PAGES_NAV_DATA from './pagesNavData.json';
-import Img from '@components/global/Img.astro';
-import Link from '@components/global/Link.astro';
-import Icon from '@components/global/Icon.astro';
+import PAGES_NAV_DATA from './pagesNavData.json'
+import Img from '@components/global/Img.astro'
+import Link from '@components/global/Link.astro'
+import Icon from '@components/global/Icon.astro'
 
 interface IPageItem {
-  title: string;
-  paragraph: string;
-  href: string;
-  img: string;
+  title: string
+  paragraph: string
+  href: string
+  img: string
 }
 ---
 
-<div class='py-128'>
-  <ul class='container flex flex-col gap-32 xl:flex-row'>
+<div class="py-128">
+  <ul class="container flex flex-col gap-32 xl:flex-row">
     {
       PAGES_NAV_DATA.map(({ title, paragraph, href, img }: IPageItem) => (
-        <li class='w-full xl:w-1/5 bg-white rounded-16 p-32 flex flex-col gap-16 justify-between'>
-          <section class='flex flex-col gap-16'>
-            <h3 class='text-h3'>{title}</h3>
-            <p class='text-p'>{paragraph}</p>
+        <li class="w-full xl:w-1/5 bg-white rounded-16 p-32 flex flex-col gap-16 justify-between">
+          <section class="flex flex-col gap-16">
+            <h3 class="text-h3">{title}</h3>
+            <p class="text-p">{paragraph}</p>
           </section>
-          <div class='flex flex-row justify-between items-start'>
+          <div class="flex flex-row justify-between items-start">
             <Link
-              tag='a'
+              tag="a"
               href={href}
-              className='w-48 h-48 flex-center rounded-full border-2 border-red-500 text-red-500 text-16 hover:text-white hover:bg-red-500'
+              className="w-48 h-48 flex-center rounded-full border-2 border-red-500 text-red-500 text-16 hover:text-white hover:bg-red-500"
             >
-              <Icon icon='arrow' className='text-16' />
+              <Icon icon="arrow" className="text-16" />
             </Link>
             <Img src={img} alt={title} width={48} height={48} />
           </div>

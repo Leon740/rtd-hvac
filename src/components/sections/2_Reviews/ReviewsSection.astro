@@ -1,22 +1,22 @@
 ---
-import REVIEWS_DATA from './reviewsData.json';
-import SectionHeader from '@partials/SectionHeader.astro';
-import Img from '@components/global/Img.astro';
+import REVIEWS_DATA from './reviewsData.json'
+import SectionHeader from '@partials/SectionHeader.astro'
+import Img from '@components/global/Img.astro'
 
 interface IReviewsItem {
-  title: string;
-  paragraph: string;
-  author: string;
+  title: string
+  paragraph: string
+  author: string
 }
 
 interface IReviewsSectionProps {
-  isScroll: boolean;
+  isScroll: boolean
 }
 
-const { isScroll = false } = Astro.props as IReviewsSectionProps;
+const { isScroll = false } = Astro.props as IReviewsSectionProps
 ---
 
-<div class='section-pt-128-flex-64'>
+<div class="section-pt-128-flex-64">
   <SectionHeader img={REVIEWS_DATA.img} title={REVIEWS_DATA.title} />
 
   <div class={`container ${isScroll ? 'max-w-full p-0' : ''}`}>
@@ -28,26 +28,26 @@ const { isScroll = false } = Astro.props as IReviewsSectionProps;
           <li
             class={`${isScroll ? 'flex-shrink-0 w-[384px] lg:w-[512px]' : 'w-full'} p-32 rounded-16 bg-white flex flex-col gap-16 justify-between`}
           >
-            <div class='flex flex-col gap-16'>
-              <div class='flex flex-row items-center gap-16'>
-                <Img src={REVIEWS_DATA.googleImg} alt='RTD HVAC Reviews' width={16} height={16} />
+            <div class="flex flex-col gap-16">
+              <div class="flex flex-row items-center gap-16">
+                <Img src={REVIEWS_DATA.googleImg} alt="RTD HVAC Reviews" width={16} height={16} />
 
-                <ul class='flex flex-row gap-8'>
+                <ul class="flex flex-row gap-8">
                   {[0, 1, 2, 3, 4].map(() => (
                     <li>
-                      <Img src={REVIEWS_DATA.starImg} alt='Star' width={16} height={16} />
+                      <Img src={REVIEWS_DATA.starImg} alt="Star" width={16} height={16} />
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <section class='flex flex-col gap-16'>
-                <h3 class='text-h3'>{title}</h3>
-                <p class='text-p'>{paragraph}</p>
+              <section class="flex flex-col gap-16">
+                <h3 class="text-h3">{title}</h3>
+                <p class="text-p">{paragraph}</p>
               </section>
             </div>
 
-            <p class='text-p'>{`- ${author}`}</p>
+            <p class="text-p">{`- ${author}`}</p>
           </li>
         ))
       }

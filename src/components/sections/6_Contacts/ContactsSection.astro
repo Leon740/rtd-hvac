@@ -1,22 +1,22 @@
 ---
-import CONTACTS_DATA from './contactsData.json';
-import SectionHeader from '@partials/SectionHeader.astro';
-import { ContactsForm } from './ContactsForm';
+import CONTACTS_DATA from './contactsData.json'
+import SectionHeader from '@partials/SectionHeader.astro'
+import { ContactsForm } from './ContactsForm'
 ---
 
-<div class='section-pt-128-flex-64'>
+<div class="section-pt-128-flex-64">
   <SectionHeader
     img={CONTACTS_DATA.img}
     title={CONTACTS_DATA.title}
     paragraph={CONTACTS_DATA.paragraph}
   />
 
-  <form name='contact' data-netlify='true' netlify-honeypot='bot-field' hidden>
-    <input type='text' name='name' />
-    <input type='email' name='email' />
-    <input type='text' name='mobile' />
-    <textarea name='message'></textarea>
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="mobile" />
+    <textarea name="message"></textarea>
   </form>
 
-  <ContactsForm client:only='preact' />
+  <ContactsForm client:only="preact" />
 </div>

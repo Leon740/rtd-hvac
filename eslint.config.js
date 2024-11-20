@@ -6,12 +6,41 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import importPlugin from 'eslint-plugin-import'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
+import astro from 'eslint-plugin-astro'
+import astroParser from 'astro-eslint-parser'
 import prettier from 'eslint-plugin-prettier/recommended'
 
 export default tseslint.config(
-  { ignores: ['dist'] },
+  { ignores: ['dist', '.astro', '.husky', '.vscode', 'node_modules', 'public'] },
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['src/**/*.astro'],
+    extends: [
+      js.configs.recommended,
+      ...tseslint.configs.recommended,
+      importPlugin.flatConfigs.recommended,
+      jsxA11y.flatConfigs.recommended,
+      ...astro.configs.recommended,
+      prettier
+    ],
+    languageOptions: {
+      parser: astroParser,
+      ecmaVersion: 2020,
+      globals: globals.browser
+    },
+    rules: {
+      'astro/no-set-html-directive': 'warn',
+      'no-console': 'warn'
+    },
+    settings: {
+      'import/resolver': {
+        typescript: {
+          project: './tsconfig.json'
+        }
+      }
+    }
+  },
+  {
+    files: ['src/**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommended,

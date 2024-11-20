@@ -7,28 +7,27 @@ import Icon from '@components/global/Icon.astro'
 const currentPath = Astro.url.pathname
 ---
 
-<h1 class='text-red-500 py-128'>{currentPath}</h1>
-<header id='header' class='bg-white sticky top-0 z-100'>
-  <div class='container'>
-    <div class='py-16 flex flex-row flex-wrap items-center justify-between'>
-      <Link tag='a' href='/'>
-        <Img src='/global/logo.svg' alt='RTD HVAC Logo' width={128} height={64} />
+<header id="header" class="bg-white sticky top-0 z-100">
+  <div class="container">
+    <div class="py-16 flex flex-row flex-wrap items-center justify-between">
+      <Link tag="a" href="/">
+        <Img src="/global/logo.svg" alt="RTD HVAC Logo" width={128} height={64} />
       </Link>
 
-      <Link tag='button' className='lg:hidden hover:text-red-500'>
-        <span id='toggler' class='flex flex-col items-center'>
-          <Icon icon='bars' className='text-32' />
-          <span class='text-16'>Menu</span>
+      <Link tag="button" className="lg:hidden hover:text-red-500">
+        <span id="toggler" class="flex flex-col items-center">
+          <Icon icon="bars" className="text-32" />
+          <span class="text-16">Menu</span>
         </span>
       </Link>
 
-      <nav id='menu' class='w-full lg:w-max max-h-0 lg:max-h-max overflow-hidden transition-all'>
-        <ul class='pt-16 lg:pt-0 flex flex-col lg:flex-row gap-16 lg:gap-32'>
+      <nav id="menu" class="w-full lg:w-max max-h-0 lg:max-h-max overflow-hidden transition-all">
+        <ul class="pt-16 lg:pt-0 flex flex-col lg:flex-row gap-16 lg:gap-32">
           {
             HEADER_DATA.links.map(({ href, label }) => (
               <li>
                 <Link
-                  tag='a'
+                  tag="a"
                   href={href}
                   className={`text-16 ${currentPath === href ? 'text-red-500' : ''} hover:text-red-500`}
                 >
@@ -41,11 +40,11 @@ const currentPath = Astro.url.pathname
       </nav>
     </div>
 
-    <div class='flex flex-wrap'>
+    <div class="flex flex-wrap">
       {
         HEADER_DATA.buttons.map(({ href, icon, label }, index) => (
           <Link
-            tag='a'
+            tag="a"
             href={href}
             className={`w-full md:w-1/2 py-8 px-16 flex flex-row items-center gap-8 text-white text-16 ${index === 0 ? 'bg-red-500' : 'bg-blue-500'}`}
           >

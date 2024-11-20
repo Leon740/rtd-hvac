@@ -3,11 +3,12 @@
 @font-face {
   font-family: 'InterTight_Regular';
   src: url('/fonts/InterTight_Regular/InterTight_Regular.eot');
-  src: url('/fonts/InterTight_Regular/InterTight_Regular.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/InterTight_Regular/InterTight_Regular.woff2') format('woff2'),
-      url('/fonts/InterTight_Regular/InterTight_Regular.woff') format('woff'),
-      url('/fonts/InterTight_Regular/InterTight_Regular.ttf') format('truetype'),
-      url('/fonts/InterTight_Regular/InterTight_Regular.svg#InterTight_Regular') format('svg');
+  src:
+    url('/fonts/InterTight_Regular/InterTight_Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/InterTight_Regular/InterTight_Regular.woff2') format('woff2'),
+    url('/fonts/InterTight_Regular/InterTight_Regular.woff') format('woff'),
+    url('/fonts/InterTight_Regular/InterTight_Regular.ttf') format('truetype'),
+    url('/fonts/InterTight_Regular/InterTight_Regular.svg#InterTight_Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,13 +17,13 @@
 @font-face {
   font-family: 'InterTight_Bold';
   src: url('/fonts/InterTight_Bold/InterTight_Bold.eot');
-  src: url('/fonts/InterTight_Bold/InterTight_Bold.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/InterTight_Bold/InterTight_Bold.woff2') format('woff2'),
-      url('/fonts/InterTight_Bold/InterTight_Bold.woff') format('woff'),
-      url('/fonts/InterTight_Bold/InterTight_Bold.ttf') format('truetype'),
-      url('/fonts/InterTight_Bold/InterTight_Bold.svg#InterTight_Bold') format('svg');
+  src:
+    url('/fonts/InterTight_Bold/InterTight_Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/InterTight_Bold/InterTight_Bold.woff2') format('woff2'),
+    url('/fonts/InterTight_Bold/InterTight_Bold.woff') format('woff'),
+    url('/fonts/InterTight_Bold/InterTight_Bold.ttf') format('truetype'),
+    url('/fonts/InterTight_Bold/InterTight_Bold.svg#InterTight_Bold') format('svg');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
-
