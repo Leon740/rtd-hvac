@@ -6,39 +6,39 @@
     },
     {
       "label": "Our Services",
-      "href": "/services"
+      "href": "/services/"
     },
     {
       "label": "Reviews",
-      "href": "/reviews"
+      "href": "/reviews/"
     },
     {
       "label": "Brands",
-      "href": "/brands"
+      "href": "/brands/"
     },
     {
       "label": "Portfolio",
-      "href": "/portfolio"
+      "href": "/portfolio/"
     },
     {
       "label": "FAQs",
-      "href": "/faqs"
+      "href": "/faqs/"
     },
     {
       "label": "Contact Us",
-      "href": "/contacts"
+      "href": "/contacts/"
     }
   ],
   "buttons": [
     {
       "icon": "mobile",
       "label": "Get a free Estimate",
-      "href": "/contacts"
+      "href": "/contacts/"
     },
     {
       "icon": "calendar",
       "label": "Check Availability",
-      "href": "/appointment"
+      "href": "/appointment/"
     }
   ]
 }
