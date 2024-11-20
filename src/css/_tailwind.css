@@ -4,11 +4,7 @@
 
 @layer base {
   p a {
-    @apply text-red-500;
-
-    &:hover {
-      @apply underline;
-    }
+    @apply text-red-500 underline;
   }
 
   a,
@@ -35,9 +31,9 @@
 
   /* background */
   .bg-body {
-    @apply bg-zinc-100
+    @apply bg-zinc-100;
   }
-  
+
   /* flex */
   .flex-center {
     @apply flex items-center justify-center;

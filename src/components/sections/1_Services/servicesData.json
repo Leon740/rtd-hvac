@@ -1,43 +1,43 @@
 {
-  "img": "sections/services.svg",
+  "img": "sections/1_services.svg",
   "title": "Home Services <span class='text-red-500'>You Can Trust</span>",
   "red": [
     {
-      "img": "services/1_furnace.svg",
+      "img": "1_services/1_furnace.svg",
       "title": "Heating",
       "paragraph": "Installation, repair and maintenance of furnaces."
     },
     {
-      "img": "services/2_heatpump.svg",
+      "img": "1_services/2_heatpump.svg",
       "title": "Heat Pumps",
       "paragraph": "Design and installation of heat pumps."
     },
     {
-      "img": "services/3_boiler.svg",
+      "img": "1_services/3_boiler.svg",
       "title": "Water Heaters",
       "paragraph": "Installation of tank and tankless water heaters."
     }
   ],
   "blue": [
     {
-      "img": "services/4_ac.svg",
+      "img": "1_services/4_ac.svg",
       "title": "Air Conditioning",
       "paragraph": "Installation, repair and maintenance of air conditioning."
     },
     {
-      "img": "services/5_minisplit.svg",
+      "img": "1_services/5_minisplit.svg",
       "title": "MiniSplits",
       "paragraph": "Design and installation of ductless minisplit systems."
     },
     {
-      "img": "services/6_humidifier.svg",
+      "img": "1_services/6_humidifier.svg",
       "title": "Indoor Air Quality",
       "paragraph": "Humidifiers and air cleaners."
     }
   ],
   "yellow": [
     {
-      "img": "services/7_electrical.svg",
+      "img": "1_services/7_electrical.svg",
       "title": "Electrical",
       "paragraph": "Service and panel upgrades."
     }

@@ -1,0 +1,15 @@
+{
+  "img": "sections/4_portfolio.svg",
+  "title": "Our Successfully <span class='text-red-500'>Completed Jobs</span>",
+  "images": [
+    "4_portfolio/1.jpg",
+    "4_portfolio/2.jpg",
+    "4_portfolio/3.jpg",
+    "4_portfolio/4.jpg",
+    "4_portfolio/5.jpg",
+    "4_portfolio/6.jpg",
+    "4_portfolio/7.jpg",
+    "4_portfolio/8.jpg",
+    "4_portfolio/9.jpg"
+  ]
+}

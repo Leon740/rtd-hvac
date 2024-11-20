@@ -1,0 +1,18 @@
+{
+  "img": "sections/3_brands.svg",
+  "title": "We select <span class='text-red-500'>a solution that fits your needs best!</span>",
+  "button": {
+    "label": "Learn more about Brands",
+    "href": "/brands"
+  },
+  "images": [
+    "3_brands/1.png",
+    "3_brands/2.png",
+    "3_brands/3.png",
+    "3_brands/4.png",
+    "3_brands/5.png",
+    "3_brands/6.png",
+    "3_brands/7.png",
+    "3_brands/8.png"
+  ]
+}

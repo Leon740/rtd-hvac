@@ -1,8 +1,8 @@
 {
-  "img": "sections/reviews.svg",
-  "title": "Hundreds of <span class='text-red-500'>Happy Homes</span>",
-  "googleImg": "reviews/google.svg",
-  "starImg": "reviews/star.svg",
+  "img": "sections/2_reviews.svg",
+  "title": "We <span class='text-red-500'>Value</span> our <span class='text-red-500'>Customers</span>",
+  "googleImg": "2_reviews/google.svg",
+  "starImg": "2_reviews/star.svg",
   "reviews": [
     {
       "title": "Exceptional all around",

@@ -2,6 +2,8 @@ import { Formik, Form, type FormikHelpers } from 'formik'
 import * as Yup from 'yup'
 import { FormInput } from '@components/global/FormInput'
 import { LinkRed } from '@components/global/LinkRed'
+import 'react-datepicker/dist/react-datepicker.css'
+import '@css/datepicker.css'
 
 export function AppointmentForm() {
   interface IValues {
@@ -167,7 +169,7 @@ export function AppointmentForm() {
             data-netlify="true"
             className="w-full xl:w-1/2 flex flex-col gap-64"
           >
-            <input type="hidden" name="form-name" value="appointment" />
+            <input type="hidden" name="form-name" value="appointment" className="hidden" />
 
             <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
               {INPUTS.map(

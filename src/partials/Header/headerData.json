@@ -1,11 +1,11 @@
 {
   "links": [
     {
-      "label": "Home",
+      "label": "Homepage",
       "href": "/"
     },
     {
-      "label": "Services",
+      "label": "Our Services",
       "href": "/services"
     },
     {
@@ -17,27 +17,27 @@
       "href": "/brands"
     },
     {
-      "label": "Photos",
-      "href": "/photos"
+      "label": "Portfolio",
+      "href": "/portfolio"
     },
     {
       "label": "FAQs",
       "href": "/faqs"
     },
     {
-      "label": "Contacts",
+      "label": "Contact Us",
       "href": "/contacts"
     }
   ],
   "buttons": [
     {
       "icon": "mobile",
-      "label": "Free Estimate",
+      "label": "Get a free Estimate",
       "href": "/contacts"
     },
     {
       "icon": "calendar",
-      "label": "Request an appointment",
+      "label": "Check Availability",
       "href": "/appointment"
     }
   ]

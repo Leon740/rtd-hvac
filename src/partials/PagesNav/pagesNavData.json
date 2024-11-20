@@ -1,32 +1,32 @@
 [
   {
-    "title": "Services",
+    "title": "Our Services",
     "paragraph": "HVAC and Electrification services for every home.",
     "href": "/services",
-    "img": "sections/services.svg"
+    "img": "sections/1_services.svg"
   },
   {
     "title": "Reviews",
     "paragraph": "Reviews from happy homeowners.",
     "href": "/reviews",
-    "img": "sections/reviews.svg"
+    "img": "sections/2_reviews.svg"
   },
   {
     "title": "Brands",
     "paragraph": "Comprehensive guide on HVAC brands.",
     "href": "/brands",
-    "img": "sections/brands.svg"
+    "img": "sections/3_brands.svg"
   },
   {
-    "title": "Photos of work",
+    "title": "Portfolio",
     "paragraph": "Photos of successfully completed jobs.",
-    "href": "/photos",
-    "img": "sections/photos.svg"
+    "href": "/portfolio",
+    "img": "sections/4_portfolio.svg"
   },
   {
     "title": "FAQs",
     "paragraph": "Answers to common HVAC questions.",
     "href": "/faqs",
-    "img": "sections/faqs.svg"
+    "img": "sections/5_faqs.svg"
   }
 ]
