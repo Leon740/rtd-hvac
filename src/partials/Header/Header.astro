@@ -7,6 +7,7 @@ import Icon from '@components/global/Icon.astro'
 const currentPath = Astro.url.pathname
 ---
 
+{currentPath}
 <header id='header' class='bg-white sticky top-0 z-100'>
   <div class='container'>
     <div class='py-16 flex flex-row flex-wrap items-center justify-between'>
@@ -58,7 +59,6 @@ const currentPath = Astro.url.pathname
 </header>
 
 <script>
-  console.log('Current path:', Astro.url.pathname)
   const header = document.getElementById('header') as HTMLDivElement
   const toggler = document.getElementById('toggler') as HTMLDivElement
   const menu = document.getElementById('menu') as HTMLDivElement
