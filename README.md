@@ -1,8 +1,7 @@
-# RTD HVAC
+# RTD Hvac
 
-RTD HVAC company website<br/>
 [Visit Website](https:/rtdhvac.netlify.app/)<br/>
-RTD HVAC provides Hvac, Electrical and general construction services
+Hvac, Electrical and general construction services.
 
 ## Tech Stack
 
