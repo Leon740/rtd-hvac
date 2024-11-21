@@ -1,15 +1,22 @@
 # RTD HVAC
 
-Company website
-[link](https:/rtdhvac.netlify.app)
+RTD HVAC company website<br/>
+[Visit Website](https:/rtdhvac.netlify.app/)<br/>
+RTD HVAC provides Hvac, Electrical and general construction services
 
 ## Tech Stack
 
-- Astro
-- Preact
-- Vanila JS
-- TypeScript
-- Tailwind
+**Language**:
+TypeScript, Native JavaScript
+
+**Framework**:
+Astro, Preact, React Formik & Yup
+
+**Styling**:
+Scss, TailwindCss
+
+**Data storage**:
+Markdown
 
 ## Pages
 
