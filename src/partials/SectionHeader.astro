@@ -1,15 +1,15 @@
 ---
-import Img from '@components/global/Img.astro'
-import { marked } from 'marked'
+import Img from '@components/global/Img.astro';
+import { marked } from 'marked';
 
 interface ISectionHeaderProps {
-  img: string
-  title: string
-  paragraph?: string
-  className?: string
+  img: string;
+  title: string;
+  paragraph?: string;
+  className?: string;
 }
 
-const { img, title, paragraph, className = '' } = Astro.props as ISectionHeaderProps
+const { img, title, paragraph, className = '' } = Astro.props as ISectionHeaderProps;
 ---
 
 <div class={`container flex flex-col gap-32 ${className}`}>
@@ -20,8 +20,9 @@ const { img, title, paragraph, className = '' } = Astro.props as ISectionHeaderP
     height={64}
   />
   <section class="flex flex-col gap-16">
-    {/* eslint-disable-next-line jsx-a11y/heading-has-content*/}
+    {/* eslint-disable-next-line jsx-a11y/heading-has-content, astro/no-set-html-directive*/}
     <h2 class="text-32 font-inter-bold" set:html={title} />
+    {/* eslint-disable-next-line astro/no-set-html-directive */}
     {paragraph && <div class="text-20 leading-loose" set:html={marked(paragraph)} />}
   </section>
 </div>

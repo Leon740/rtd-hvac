@@ -1,12 +1,12 @@
-import { type ReactNode } from 'preact/compat'
+import { type ReactNode } from 'preact/compat';
 
 interface ILinkMinProps {
-  tag: 'a' | 'button'
-  buttonType?: 'button' | 'submit'
-  href?: string
-  isExternal: boolean
-  className?: string
-  children: ReactNode
+  tag: 'a' | 'button';
+  buttonType?: 'button' | 'submit';
+  href?: string;
+  isExternal: boolean;
+  className?: string;
+  children: ReactNode;
 }
 
 export function Link({
@@ -32,5 +32,5 @@ export function Link({
     <button type={buttonType} className={className}>
       {children}
     </button>
-  )
+  );
 }

@@ -1,14 +1,14 @@
 ---
-import BRANDS_DATA from './brandsData.json'
-import SectionHeader from '@partials/SectionHeader.astro'
-import Img from '@components/global/Img.astro'
-import { LinkRed } from '@components/global/LinkRed'
+import BRANDS_DATA from './brandsData.json';
+import SectionHeader from '@partials/SectionHeader.astro';
+import Img from '@components/global/Img.astro';
+import { LinkRed } from '@components/global/LinkRed';
 
 interface IBrandsSectionProps {
-  hasLink: boolean
+  hasLink: boolean;
 }
 
-const { hasLink = true } = Astro.props as IBrandsSectionProps
+const { hasLink = true } = Astro.props as IBrandsSectionProps;
 ---
 
 <div class="section-pt-128-flex-64">

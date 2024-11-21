@@ -1,12 +1,12 @@
-import { Link } from './Link'
-import { Icon } from './Icon'
+import { Link } from './Link';
+import { Icon } from './Icon';
 
 interface ILinkRedProps {
-  tag: 'a' | 'button'
-  style: 'Primary' | 'Secondary'
-  buttonType?: 'button' | 'submit'
-  href?: string
-  label: string
+  tag: 'a' | 'button';
+  style: 'Primary' | 'Secondary';
+  buttonType?: 'button' | 'submit';
+  href?: string;
+  label: string;
 }
 
 export function LinkRed({
@@ -27,5 +27,5 @@ export function LinkRed({
       <span>{label}</span>
       <Icon icon="arrow" />
     </Link>
-  )
+  );
 }

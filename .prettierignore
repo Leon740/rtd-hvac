@@ -1,0 +1,6 @@
+dist
+.astro
+.husky
+.vscode
+node_modules
+public

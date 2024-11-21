@@ -1,19 +1,19 @@
 ---
-import REVIEWS_DATA from './reviewsData.json'
-import SectionHeader from '@partials/SectionHeader.astro'
-import Img from '@components/global/Img.astro'
+import REVIEWS_DATA from './reviewsData.json';
+import SectionHeader from '@partials/SectionHeader.astro';
+import Img from '@components/global/Img.astro';
 
 interface IReviewsItem {
-  title: string
-  paragraph: string
-  author: string
+  title: string;
+  paragraph: string;
+  author: string;
 }
 
 interface IReviewsSectionProps {
-  isScroll: boolean
+  isScroll: boolean;
 }
 
-const { isScroll = false } = Astro.props as IReviewsSectionProps
+const { isScroll = false } = Astro.props as IReviewsSectionProps;
 ---
 
 <div class="section-pt-128-flex-64">

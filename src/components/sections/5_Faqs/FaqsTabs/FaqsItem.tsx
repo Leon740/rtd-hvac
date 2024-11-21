@@ -1,19 +1,19 @@
-import { marked } from 'marked'
-import faqsItemStyles from './faqs_item.module.css'
-import { useEffect, useRef } from 'preact/hooks'
-import { useWindowSize } from '@hooks/useWindowSize'
-import { Icon } from '@components/global/Icon'
+import { marked } from 'marked';
+import faqsItemStyles from './faqs_item.module.css';
+import { useEffect, useRef } from 'preact/hooks';
+import { useWindowSize } from '@hooks/useWindowSize';
+import { Icon } from '@components/global/Icon';
 
 export interface IFaqsItem {
-  title: string
-  paragraph: string
+  title: string;
+  paragraph: string;
 }
 
 export interface IFaqsItemProps extends IFaqsItem {
-  handleOnClick: () => void
-  isActive: boolean
-  activeItemColor: string
-  hoverItemColor: string
+  handleOnClick: () => void;
+  isActive: boolean;
+  activeItemColor: string;
+  hoverItemColor: string;
 }
 
 export function FaqsItem({
@@ -26,21 +26,21 @@ export function FaqsItem({
 }: IFaqsItemProps) {
   // handleOnClick
   const handleButtonOnClick = () => {
-    handleOnClick()
-  }
+    handleOnClick();
+  };
 
   // toggle faqsItemBodyRf
-  const { width: windowWidth } = useWindowSize()
+  const { width: windowWidth } = useWindowSize();
 
-  const faqsItemBodyRf = useRef<HTMLDivElement>(null)
+  const faqsItemBodyRf = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (faqsItemBodyRf.current) {
       faqsItemBodyRf.current.style.maxHeight = isActive
         ? `${faqsItemBodyRf.current.scrollHeight}px`
-        : `0px`
+        : `0px`;
     }
-  }, [isActive, windowWidth])
+  }, [isActive, windowWidth]);
 
   return (
     <>
@@ -61,5 +61,5 @@ export function FaqsItem({
         />
       </div>
     </>
-  )
+  );
 }

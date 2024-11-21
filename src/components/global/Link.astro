@@ -1,10 +1,10 @@
 ---
 interface ILinkMinProps {
-  tag: 'a' | 'button'
-  buttonType?: 'button' | 'submit'
-  href?: string
-  isExternal: boolean
-  className?: string
+  tag: 'a' | 'button';
+  buttonType?: 'button' | 'submit';
+  href?: string;
+  isExternal: boolean;
+  className?: string;
 }
 
 const {
@@ -13,7 +13,7 @@ const {
   href,
   isExternal = false,
   className = ''
-} = Astro.props as ILinkMinProps
+} = Astro.props as ILinkMinProps;
 ---
 
 {
