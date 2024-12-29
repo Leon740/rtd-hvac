@@ -1,18 +1,18 @@
 {
-  "img": "sections/3_brands.svg",
+  "img": "pages/pages_3_brands.svg",
   "title": "We select <b>a solution that fits your needs best!</b>",
   "button": {
     "label": "Learn more about Brands",
     "href": "/brands"
   },
   "images": [
-    "3_brands/1.png",
-    "3_brands/2.png",
-    "3_brands/3.png",
-    "3_brands/4.png",
-    "3_brands/5.png",
-    "3_brands/6.png",
-    "3_brands/7.png",
-    "3_brands/8.png"
+    "3_brands/brands_1.png",
+    "3_brands/brands_2.png",
+    "3_brands/brands_3.png",
+    "3_brands/brands_4.png",
+    "3_brands/brands_5.png",
+    "3_brands/brands_6.png",
+    "3_brands/brands_7.png",
+    "3_brands/brands_8.png"
   ]
 }

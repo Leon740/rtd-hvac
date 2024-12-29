@@ -18,7 +18,7 @@ export function Link({
   children
 }: ILinkProps) {
   return tag === 'a' && href ? (
-    isExternal ? (
+    isExternal || href.includes('https') ? (
       <a href={href} className={className} target="_blank" rel="noopener noreferrer">
         {children}
       </a>

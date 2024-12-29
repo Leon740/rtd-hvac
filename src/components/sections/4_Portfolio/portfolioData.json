@@ -1,15 +1,15 @@
 {
-  "img": "sections/4_portfolio.svg",
+  "img": "pages/pages_4_portfolio.svg",
   "title": "Our Successfully <b>Completed Jobs</b>",
   "images": [
-    "4_portfolio/1.jpg",
-    "4_portfolio/2.jpg",
-    "4_portfolio/3.jpg",
-    "4_portfolio/4.jpg",
-    "4_portfolio/5.jpg",
-    "4_portfolio/6.jpg",
-    "4_portfolio/7.jpg",
-    "4_portfolio/8.jpg",
-    "4_portfolio/9.jpg"
+    "4_portfolio/portfolio_1.jpg",
+    "4_portfolio/portfolio_2.jpg",
+    "4_portfolio/portfolio_3.jpg",
+    "4_portfolio/portfolio_4.jpg",
+    "4_portfolio/portfolio_5.jpg",
+    "4_portfolio/portfolio_6.jpg",
+    "4_portfolio/portfolio_7.jpg",
+    "4_portfolio/portfolio_8.jpg",
+    "4_portfolio/portfolio_9.jpg"
   ]
 }

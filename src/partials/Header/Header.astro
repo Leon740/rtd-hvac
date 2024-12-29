@@ -11,7 +11,13 @@ const currentPath = Astro.url.pathname;
   <div class="container">
     <div class="py-16 flex flex-row flex-wrap items-center justify-between">
       <Link tag="a" href="/">
-        <Img src="global/logo.svg" alt="RTD HVAC Logo" width={128} height={64} isLazy={false} />
+        <Img
+          src="global/global_logo.svg"
+          alt="RTD HVAC Logo"
+          width={128}
+          height={64}
+          isLazy={false}
+        />
       </Link>
 
       <Link tag="button" className="lg:hidden hover:text-red-500">
