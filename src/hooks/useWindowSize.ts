@@ -7,7 +7,6 @@ interface IWindowSize {
 
 function getWindowSize(): IWindowSize {
   if (typeof window === 'undefined') {
-    // Return a default size if `window` is not available (for server-side rendering)
     return { width: 0, height: 0 };
   }
 

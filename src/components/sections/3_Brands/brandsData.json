@@ -1,6 +1,6 @@
 {
   "img": "sections/3_brands.svg",
-  "title": "We select <span class='text-red-500'>a solution that fits your needs best!</span>",
+  "title": "We select <b>a solution that fits your needs best!</b>",
   "button": {
     "label": "Learn more about Brands",
     "href": "/brands"

@@ -1,6 +1,7 @@
-dist
-.astro
-.husky
-.vscode
-node_modules
-public
+dist/
+.astro/
+node_modules/
+.vscode/
+.DS_Store
+.husky/
+public/

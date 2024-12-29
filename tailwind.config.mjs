@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,tsx}'],
   theme: {
     extend: {
       container: {
@@ -33,8 +33,8 @@ export default {
         full: '50%'
       },
       zIndex: {
-        10: '10',
-        100: '100'
+        faqsTabsHeader10: '10',
+        header100: '100'
       }
     }
   },

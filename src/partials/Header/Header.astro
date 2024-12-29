@@ -1,27 +1,30 @@
 ---
 import HEADER_DATA from './headerData.json';
-import Link from '@components/global/Link.astro';
+import { Link } from '@components/global/Link';
+import { Icon } from '@components/global/Icon';
 import Img from '@components/global/Img.astro';
-import Icon from '@components/global/Icon.astro';
 
 const currentPath = Astro.url.pathname;
 ---
 
-<header id="header" class="bg-white sticky top-0 z-100">
+<header id="headerContainer" class="bg-white sticky top-0 z-header100">
   <div class="container">
     <div class="py-16 flex flex-row flex-wrap items-center justify-between">
       <Link tag="a" href="/">
-        <Img src="/global/logo.svg" alt="RTD HVAC Logo" width={128} height={64} />
+        <Img src="global/logo.svg" alt="RTD HVAC Logo" width={128} height={64} isLazy={false} />
       </Link>
 
       <Link tag="button" className="lg:hidden hover:text-red-500">
-        <span id="toggler" class="flex flex-col items-center">
+        <span id="menuToggler" class="flex flex-col items-center">
           <Icon icon="bars" className="text-32" />
           <span class="text-16">Menu</span>
         </span>
       </Link>
 
-      <nav id="menu" class="w-full lg:w-max max-h-0 lg:max-h-max overflow-hidden transition-all">
+      <nav
+        id="menuContainer"
+        class="w-full lg:w-max max-h-0 lg:max-h-max overflow-hidden transition-all"
+      >
         <ul class="pt-16 lg:pt-0 flex flex-col lg:flex-row gap-16 lg:gap-32">
           {
             HEADER_DATA.links.map(({ href, label }) => (
@@ -48,6 +51,8 @@ const currentPath = Astro.url.pathname;
             href={href}
             className={`w-full md:w-1/2 py-8 px-16 flex flex-row items-center gap-8 text-white text-16 ${index === 0 ? 'bg-red-500' : 'bg-blue-500'}`}
           >
+            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+            {/* @ts-ignore */}
             <Icon icon={icon} />
             <span>{label}</span>
           </Link>
@@ -58,23 +63,23 @@ const currentPath = Astro.url.pathname;
 </header>
 
 <script>
-  const header = document.getElementById('header') as HTMLDivElement;
-  const toggler = document.getElementById('toggler') as HTMLDivElement;
-  const menu = document.getElementById('menu') as HTMLDivElement;
+  const headerContainer = document.getElementById('headerContainer') as HTMLDivElement;
+  const menuToggler = document.getElementById('menuToggler') as HTMLDivElement;
+  const menuContainer = document.getElementById('menuContainer') as HTMLDivElement;
 
-  toggler.addEventListener('click', () => {
-    menu.classList.toggle('max-h-0');
-    menu.classList.toggle('max-h-[280px]');
-    toggler.classList.toggle('text-red-500');
+  menuToggler.addEventListener('click', () => {
+    menuContainer.classList.toggle('max-h-0');
+    menuContainer.classList.toggle('max-h-[280px]');
+    menuToggler.classList.toggle('text-red-500');
   });
 
-  function clickOutsideHeaderHandler(event: MouseEvent) {
-    if (!header.contains(event.target as Node)) {
-      menu.classList.remove('max-h-[280px]');
-      menu.classList.add('max-h-0');
-      toggler.classList.remove('text-red-500');
+  function handleClickOutsideHeader(event: MouseEvent) {
+    if (!headerContainer.contains(event.target as Node)) {
+      menuContainer.classList.remove('max-h-[280px]');
+      menuContainer.classList.add('max-h-0');
+      menuToggler.classList.remove('text-red-500');
     }
   }
 
-  document.addEventListener('click', clickOutsideHeaderHandler);
+  document.addEventListener('click', handleClickOutsideHeader);
 </script>

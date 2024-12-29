@@ -1,19 +1,13 @@
 ---
 import REVIEWS_DATA from './reviewsData.json';
-import SectionHeader from '@partials/SectionHeader.astro';
+import SectionHeader from '@components/global/SectionHeader.astro';
 import Img from '@components/global/Img.astro';
 
-interface IReviewsItem {
-  title: string;
-  paragraph: string;
-  author: string;
+interface Props {
+  isScroll?: boolean;
 }
 
-interface IReviewsSectionProps {
-  isScroll: boolean;
-}
-
-const { isScroll = false } = Astro.props as IReviewsSectionProps;
+const { isScroll = false } = Astro.props;
 ---
 
 <div class="section-pt-128-flex-64">
@@ -24,7 +18,7 @@ const { isScroll = false } = Astro.props as IReviewsSectionProps;
       class={`flex gap-32 ${isScroll ? 'flex-row flex-nowrap overflow-x-auto px-32' : 'flex-col'}`}
     >
       {
-        REVIEWS_DATA.reviews.map(({ title, paragraph, author }: IReviewsItem) => (
+        REVIEWS_DATA.reviews.map(({ title, paragraph, author }) => (
           <li
             class={`${isScroll ? 'flex-shrink-0 w-[384px] lg:w-[512px]' : 'w-full'} p-32 rounded-16 bg-white flex flex-col gap-16 justify-between`}
           >

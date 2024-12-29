@@ -9,10 +9,11 @@ interface IFaqsTabBodyProps {
 }
 
 export function FaqsTabBody({ tabKey, activeItemColor, hoverItemColor, faqs }: IFaqsTabBodyProps) {
+  // activeItemId
   const initialActiveItemId = `${tabKey}_0`;
   const [activeItemIdSt, setActiveItemIdSt] = useState<string>(initialActiveItemId);
 
-  const handleFaqsItemOnClick = (id: string) => {
+  const handleFaqsItemClick = (id: string) => {
     setActiveItemIdSt(id === activeItemIdSt ? initialActiveItemId : id);
   };
 
@@ -24,10 +25,10 @@ export function FaqsTabBody({ tabKey, activeItemColor, hoverItemColor, faqs }: I
         return (
           <li key={`FaqsItem_${title}`} className="bg-white rounded-16">
             <FaqsItem
-              handleOnClick={() => handleFaqsItemOnClick(itemId)}
+              handleClick={() => handleFaqsItemClick(itemId)}
               isActive={activeItemIdSt === itemId}
-              activeItemColor={activeItemColor}
-              hoverItemColor={hoverItemColor}
+              activeColor={activeItemColor}
+              hoverColor={hoverItemColor}
               title={title}
               paragraph={paragraph}
             />

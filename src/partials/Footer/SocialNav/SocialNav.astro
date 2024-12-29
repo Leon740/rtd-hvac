@@ -1,19 +1,13 @@
 ---
 import SOCIAL_NAV_DATA from './socialNavData.json';
 import Img from '@components/global/Img.astro';
-import Link from '@components/global/Link.astro';
-
-interface INavItem {
-  label: string;
-  href: string;
-  img: string;
-}
+import { Link } from '@components/global/Link';
 ---
 
 <div class="bg-white py-32">
   <ul class="container flex flex-col gap-32 lg:flex-row">
     {
-      SOCIAL_NAV_DATA.map(({ label, href, img }: INavItem) => (
+      SOCIAL_NAV_DATA.map(({ label, href, img }) => (
         <li class="w-full lg:w-1/4">
           <Link
             tag="a"

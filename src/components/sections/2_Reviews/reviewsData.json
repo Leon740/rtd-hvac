@@ -1,6 +1,6 @@
 {
   "img": "sections/2_reviews.svg",
-  "title": "We <span class='text-red-500'>Value</span> our <span class='text-red-500'>Customers</span>",
+  "title": "We <b>Value</b> our <b>Customers</b>",
   "googleImg": "2_reviews/google.svg",
   "starImg": "2_reviews/star.svg",
   "reviews": [

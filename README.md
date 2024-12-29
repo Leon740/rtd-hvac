@@ -1,7 +1,7 @@
 # RTD Hvac
 
-[Visit Website](https:/rtdhvac.netlify.app/)<br/>
-Hvac, Electrical and general construction services.
+[Visit Website](https:/rtdhvac.netlify.app/)  
+Hvac, Electrical and General Construction services.
 
 ## Tech Stack
 

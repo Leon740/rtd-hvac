@@ -1,6 +1,6 @@
 {
   "img": "sections/4_portfolio.svg",
-  "title": "Our Successfully <span class='text-red-500'>Completed Jobs</span>",
+  "title": "Our Successfully <b>Completed Jobs</b>",
   "images": [
     "4_portfolio/1.jpg",
     "4_portfolio/2.jpg",

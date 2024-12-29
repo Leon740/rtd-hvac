@@ -1,6 +1,6 @@
 {
   "img": "sections/5_faqs.svg",
-  "title": "<span class='text-red-500'>F</span>requently <span class='text-red-500'>A</span>sked <span class='text-red-500'>Q</span>uestion<span class='text-red-500'>s</span>",
+  "title": "<b>F</b>requently <b>A</b>sked <b>Q</b>uestion<b>s</b>",
   "paragraph": "We want to make sure all of your questions are answered. <br/> Not finding your answers here? Please [Contact Us](/contacts).",
   "tabs": {
     "general": [

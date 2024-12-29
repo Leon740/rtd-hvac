@@ -6,18 +6,21 @@ import Footer from '@partials/Footer/Footer.astro';
 
 interface Props {
   title: string;
-  isPagesNav?: boolean;
+  hasPagesNav?: boolean;
 }
 
-const { title, isPagesNav = true } = Astro.props;
+const { title, hasPagesNav = true } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://rtdhvac.com" />
 
     <!-- Seo -->
     <title>{`RTD HVAC ${title}`}</title>
@@ -27,22 +30,25 @@ const { title, isPagesNav = true } = Astro.props;
     />
     <meta
       name="description"
-      content="RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades."
+      content="RTD HVAC provides comprehensive HVAC services in Pennsylvania, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades."
     />
+
+    <!-- Og -->
     <meta property="og:title" content="RTD HVAC - Professional HVAC Services in Pennsylvania" />
     <meta
       property="og:description"
-      content="RTD HVAC provides comprehensive HVAC services in PA, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades."
+      content="RTD HVAC provides comprehensive HVAC services in Pennsylvania, including installation, repair, and maintenance of furnaces; design and installation of heat pumps; tank and tankless water heater installation; air conditioning services; ductless minisplit system design and installation; humidifiers, air cleaners, service and panel upgrades."
     />
-    <meta property="og:image" content="/images/global/opengraph.jpg" />
+    <meta property="og:image" content="/opengraph/opengraph.jpg" />
     <meta property="og:url" content="https://rtdhvac.com" />
     <meta property="og:type" content="website" />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="RTD HVAC" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
   </head>
   <body class="font-inter-regular bg-body text-stone-800">
@@ -50,7 +56,8 @@ const { title, isPagesNav = true } = Astro.props;
 
     <slot />
 
-    {isPagesNav ? <PagesNav /> : <div class="pt-128" />}
+    {hasPagesNav ? <PagesNav /> : <div class="pt-128" />}
+
     <Footer />
   </body>
 </html>

@@ -1,23 +1,21 @@
 ---
 import BRANDS_DATA from './brandsData.json';
-import SectionHeader from '@partials/SectionHeader.astro';
+import SectionHeader from '@components/global/SectionHeader.astro';
 import Img from '@components/global/Img.astro';
-import { LinkRed } from '@components/global/LinkRed';
+import { Button } from '@components/global/Button';
 
-interface IBrandsSectionProps {
-  hasLink: boolean;
+interface Props {
+  hasLink?: boolean;
 }
 
-const { hasLink = true } = Astro.props as IBrandsSectionProps;
+const { hasLink = false } = Astro.props;
 ---
 
 <div class="section-pt-128-flex-64">
   <SectionHeader img={BRANDS_DATA.img} title={BRANDS_DATA.title} />
 
-  <div
-    class="bg-white xl:bg-transparent container max-w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl"
-  >
-    <ul class="xl:bg-white flex flex-row flex-wrap">
+  <div class="container max-w-full xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+    <ul class="bg-white flex flex-row flex-wrap">
       {
         BRANDS_DATA.images.map((img) => (
           <li class="p-16 flex-center w-1/4 md:w-[12.5%]">
@@ -31,7 +29,7 @@ const { hasLink = true } = Astro.props as IBrandsSectionProps;
   {
     hasLink && (
       <div class="container">
-        <LinkRed
+        <Button
           tag="a"
           style="Secondary"
           href={BRANDS_DATA.button.href}

@@ -1,13 +1,13 @@
 ---
 import PORTFOLIO_DATA from './portfolioData.json';
-import SectionHeader from '@partials/SectionHeader.astro';
+import SectionHeader from '@components/global/SectionHeader.astro';
 import Img from '@components/global/Img.astro';
 
-interface IPhotosSectionProps {
-  isScroll: boolean;
+interface Props {
+  isScroll?: boolean;
 }
 
-const { isScroll = false } = Astro.props as IPhotosSectionProps;
+const { isScroll = false } = Astro.props;
 ---
 
 <div class="section-pt-128-flex-64">

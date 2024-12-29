@@ -10,26 +10,26 @@ export interface IFaqsItem {
 }
 
 export interface IFaqsItemProps extends IFaqsItem {
-  handleOnClick: () => void;
+  handleClick: () => void;
   isActive: boolean;
-  activeItemColor: string;
-  hoverItemColor: string;
+  activeColor: string;
+  hoverColor: string;
 }
 
 export function FaqsItem({
-  handleOnClick,
+  handleClick,
   isActive,
-  activeItemColor,
-  hoverItemColor,
+  activeColor,
+  hoverColor,
   title,
   paragraph
 }: IFaqsItemProps) {
-  // handleOnClick
-  const handleButtonOnClick = () => {
-    handleOnClick();
+  // handleClick
+  const buttonOnClick = () => {
+    handleClick();
   };
 
-  // toggle faqsItemBodyRf
+  // toggle
   const { width: windowWidth } = useWindowSize();
 
   const faqsItemBodyRf = useRef<HTMLDivElement>(null);
@@ -46,8 +46,8 @@ export function FaqsItem({
     <>
       <button
         type="button"
-        onClick={handleButtonOnClick}
-        className={`w-full text-16 p-16 xl:p-32 flex flex-row items-center justify-between ${hoverItemColor} ${isActive ? activeItemColor : ''}`}
+        onClick={buttonOnClick}
+        className={`w-full text-16 p-16 xl:p-32 flex flex-row items-center justify-between ${hoverColor} ${isActive ? activeColor : ''}`}
       >
         <span className="text-left">{title}</span>
 
@@ -56,7 +56,7 @@ export function FaqsItem({
 
       <div className="overflow-hidden transition-all" ref={faqsItemBodyRf}>
         <div
-          className={`px-16 pb-16 xl:px-32 xl:pb-32 text-p faqs-p ${faqsItemStyles['faqs-p']}`}
+          className={`px-16 pb-16 xl:px-32 xl:pb-32 text-p ${faqsItemStyles['faqs-p']}`}
           dangerouslySetInnerHTML={{ __html: marked(paragraph) as string }}
         />
       </div>

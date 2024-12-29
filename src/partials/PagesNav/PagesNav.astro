@@ -1,21 +1,14 @@
 ---
 import PAGES_NAV_DATA from './pagesNavData.json';
 import Img from '@components/global/Img.astro';
-import Link from '@components/global/Link.astro';
-import Icon from '@components/global/Icon.astro';
-
-interface IPageItem {
-  title: string;
-  paragraph: string;
-  href: string;
-  img: string;
-}
+import { Link } from '@components/global/Link';
+import { Icon } from '@components/global/Icon';
 ---
 
 <div class="py-128">
   <ul class="container flex flex-col gap-32 xl:flex-row">
     {
-      PAGES_NAV_DATA.map(({ title, paragraph, href, img }: IPageItem) => (
+      PAGES_NAV_DATA.map(({ title, paragraph, href, img }) => (
         <li class="w-full xl:w-1/5 bg-white rounded-16 p-32 flex flex-col gap-16 justify-between">
           <section class="flex flex-col gap-16">
             <h3 class="text-h3">{title}</h3>

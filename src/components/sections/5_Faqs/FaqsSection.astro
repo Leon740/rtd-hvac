@@ -1,20 +1,21 @@
 ---
 import FAQS_DATA from './faqsData.json';
-import SectionHeader from '@partials/SectionHeader.astro';
+import SectionHeader from '@components/global/SectionHeader.astro';
 import { FaqsTabs, type TTabKey } from './FaqsTabs/FaqsTabs';
 
-interface IFaqsSection {
+interface Props {
   activeTabKey?: TTabKey;
 }
 
-const { activeTabKey } = Astro.props as IFaqsSection;
+const { activeTabKey } = Astro.props;
 ---
 
 <div class="section-pt-128">
   <SectionHeader img={FAQS_DATA.img} title={FAQS_DATA.title} paragraph={FAQS_DATA.paragraph} />
 
+  <div id="faqsTabsHeaderScrollIntoView"></div>
+
   <div class="container">
-    <div id="faqsTabsHeaderScrollIntoView"></div>
     <FaqsTabs tabs={FAQS_DATA.tabs} activeTabKey={activeTabKey} client:load />
   </div>
 </div>

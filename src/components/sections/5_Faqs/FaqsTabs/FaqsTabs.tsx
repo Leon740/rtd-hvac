@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'preact/hooks';
+import { useState } from 'preact/hooks';
 import { FaqsTabBody } from './FaqsTabBody';
 import { type IFaqsItem } from './FaqsItem';
+import { useEffect } from 'react';
+import { useWindowSize } from '@hooks/useWindowSize';
 
 export type TTabKey =
   | 'general'
@@ -77,18 +79,19 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
     activeTabKey ? activeTabKey : (tabsKeys[0] as TTabKey)
   );
 
-  let faqsTabsHeaderScrollIntoView: HTMLElement | null = null;
-
+  // scrollIntoView
+  const { width: windowWidth } = useWindowSize();
+  const [headerHeightSt, setHeaderHeightSt] = useState<177 | 137>(177);
   useEffect(() => {
-    faqsTabsHeaderScrollIntoView = document.getElementById('faqsTabsHeaderScrollIntoView');
-  }, []);
+    setHeaderHeightSt(windowWidth < 768 ? 177 : 137);
+  }, [windowWidth]);
 
-  const handleTabHeaderOnClick = (tab: TTabKey) => {
+  const handleTabHeaderClick = (tab: TTabKey) => {
     setActiveTabKeySt(tab);
 
-    faqsTabsHeaderScrollIntoView?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+    window.scrollTo({
+      top: document.getElementById('faqsTabsHeaderScrollIntoView')!.offsetTop - headerHeightSt,
+      behavior: 'smooth'
     });
   };
 
@@ -97,16 +100,17 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
       {/* pt-48 -> 64 - tabHeader py-16 = 48 */}
       {/* gap-16 -> 32 - tabHeader py-16 = 16 */}
 
-      <ul className="flex flex-row gap-32 py-16 sticky z-10 top-[177px] md:top-[137px] bg-body overflow-auto">
+      {/* top = header height */}
+      <ul className="flex flex-row gap-32 py-16 sticky z-faqsTabsHeader10 top-[177px] md:top-[137px] bg-body overflow-auto">
         {tabsKeys.map((tabKey) => {
           const tabColors = COLORS[tabKey as TTabKey];
 
           return (
-            <li key={`FaqsTabHeader_${tabKey}`} className="flex-shrink-0">
+            <li key={`FaqsTabs_Header_${tabKey}`} className="flex-shrink-0">
               <button
                 type="button"
                 className={`text-16-regular capitalize py-8 px-16 rounded-16 ${tabColors.background} border-2 ${tabKey === activeTabKeySt ? tabColors.activeBorder : tabColors.border}`}
-                onClick={() => handleTabHeaderOnClick(tabKey as TTabKey)}
+                onClick={() => handleTabHeaderClick(tabKey as TTabKey)}
               >
                 {tabKey.replace('_', ' ')}
               </button>
@@ -121,7 +125,7 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
 
           return (
             <FaqsTabBody
-              key={`FaqsTabBody_${tabKey}`}
+              key={`FaqsTabs_Body_${tabKey}`}
               tabKey={tabKey}
               activeItemColor={tabColors.activeColor}
               hoverItemColor={tabColors.hoverColor}

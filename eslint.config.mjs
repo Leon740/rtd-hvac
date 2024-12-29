@@ -1,9 +1,11 @@
 import tseslint from 'typescript-eslint'
 import js from '@eslint/js'
 import globals from 'globals'
+
 import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+
 import importPlugin from 'eslint-plugin-import'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
 import astro from 'eslint-plugin-astro'
@@ -11,7 +13,17 @@ import astroParser from 'astro-eslint-parser'
 import prettier from 'eslint-plugin-prettier/recommended'
 
 export default tseslint.config(
-  { ignores: ['dist', '.astro', '.husky', '.vscode', 'node_modules', 'public'] },
+  {
+    ignores: [
+      'dist/',
+      '.astro/',
+      'node_modules/',
+      '.vscode/',
+      '.DS_Store',
+      '.husky/',
+      'public/'
+    ]
+  },
   {
     files: ['src/**/*.astro'],
     extends: [
@@ -19,8 +31,8 @@ export default tseslint.config(
       ...tseslint.configs.recommended,
       importPlugin.flatConfigs.recommended,
       jsxA11y.flatConfigs.recommended,
-      ...astro.configs.recommended,
-      prettier
+      prettier,
+      ...astro.configs.recommended
     ],
     languageOptions: {
       parser: astroParser,

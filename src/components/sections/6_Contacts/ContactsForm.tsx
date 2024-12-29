@@ -1,7 +1,7 @@
 import { Formik, Form, type FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { FormInput } from '@components/global/FormInput';
-import { LinkRed } from '@components/global/LinkRed';
+import { Button } from '@components/global/Button';
 
 export function ContactsForm() {
   interface IValues {
@@ -126,7 +126,7 @@ export function ContactsForm() {
               ))}
             </div>
 
-            <LinkRed tag="button" style="Primary" buttonType="submit" label="Send my Message" />
+            <Button tag="button" buttonType="submit" style="Primary" label="Send my Message" />
           </Form>
         )}
       </Formik>

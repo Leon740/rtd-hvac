@@ -1,6 +1,6 @@
 {
   "img": "sections/1_services.svg",
-  "title": "Home Services <span class='text-red-500'>You Can Trust</span>",
+  "title": "Home Services <b>You Can Trust</b>",
   "red": [
     {
       "img": "1_services/1_furnace.svg",
