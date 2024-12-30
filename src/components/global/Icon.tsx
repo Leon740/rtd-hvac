@@ -4,5 +4,5 @@ interface IIconProps {
 }
 
 export function Icon({ icon, className = '' }: IIconProps) {
-  return <i className={`icon-${icon} ${className}`}></i>;
+  return <i className={`icon-${icon} ${className}`} />;
 }

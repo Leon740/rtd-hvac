@@ -1,28 +1,20 @@
-import tseslint from 'typescript-eslint'
-import js from '@eslint/js'
-import globals from 'globals'
+import tseslint from 'typescript-eslint';
+import js from '@eslint/js';
+import globals from 'globals';
 
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 
-import importPlugin from 'eslint-plugin-import'
-import jsxA11y from 'eslint-plugin-jsx-a11y'
-import astro from 'eslint-plugin-astro'
-import astroParser from 'astro-eslint-parser'
-import prettier from 'eslint-plugin-prettier/recommended'
+import importPlugin from 'eslint-plugin-import';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import astro from 'eslint-plugin-astro';
+import astroParser from 'astro-eslint-parser';
+import prettier from 'eslint-plugin-prettier/recommended';
 
 export default tseslint.config(
   {
-    ignores: [
-      'dist/',
-      '.astro/',
-      'node_modules/',
-      '.vscode/',
-      '.DS_Store',
-      '.husky/',
-      'public/'
-    ]
+    ignores: ['dist/', '.astro/', 'node_modules/', '.vscode/', '.DS_Store', '.husky/', 'public/']
   },
   {
     files: ['src/**/*.astro'],
@@ -41,7 +33,8 @@ export default tseslint.config(
     },
     rules: {
       'astro/no-set-html-directive': 'warn',
-      'no-console': 'warn'
+      'no-console': 'warn',
+      'self-closing-comp': 'error'
     },
     settings: {
       'import/resolver': {
@@ -81,9 +74,10 @@ export default tseslint.config(
     },
     rules: {
       'no-console': 'warn',
+      'react/self-closing-comp': 'error',
       'react/button-has-type': 'error',
       'react/react-in-jsx-scope': ['off'],
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }]
     }
   }
-)
+);
