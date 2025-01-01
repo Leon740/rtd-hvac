@@ -1,23 +1,23 @@
 import { type ReactNode } from 'preact/compat';
 
 export interface ILinkProps {
-  tag: 'a' | 'button';
   buttonType?: 'button' | 'submit';
   href?: string;
+  handleClick?: () => void;
   isExternal?: boolean;
   className?: string;
   children: ReactNode;
 }
 
 export function Link({
-  tag = 'a',
-  buttonType = 'button',
+  buttonType,
   href,
+  handleClick = () => {},
   isExternal = false,
   className = '',
   children
 }: ILinkProps) {
-  return tag === 'a' && href ? (
+  return href && !buttonType ? (
     isExternal || href.includes('https') ? (
       <a href={href} className={className} target="_blank" rel="noopener noreferrer">
         {children}
@@ -29,7 +29,7 @@ export function Link({
     )
   ) : (
     // eslint-disable-next-line react/button-has-type
-    <button type={buttonType} className={className}>
+    <button type={buttonType || 'button'} onClick={handleClick} className={className}>
       {children}
     </button>
   );

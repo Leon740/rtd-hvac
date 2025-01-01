@@ -1,8 +1,9 @@
 {
-  "img": "sections/sections_2_reviews.svg",
-  "title": "We <b>Value</b> our <b>Customers</b>",
+  "header": {
+    "img": "sections/sections_2_reviews.svg",
+    "title": "We <b>Value</b> our <b>Customers</b>"
+  },
   "googleImg": "2_reviews/reviews_google.svg",
-  "starImg": "2_reviews/reviews_star.svg",
   "reviews": [
     {
       "title": "Exceptional all around",

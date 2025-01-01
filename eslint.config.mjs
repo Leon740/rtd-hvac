@@ -33,8 +33,7 @@ export default tseslint.config(
     },
     rules: {
       'astro/no-set-html-directive': 'warn',
-      'no-console': 'warn',
-      'self-closing-comp': 'error'
+      'no-console': 'warn'
     },
     settings: {
       'import/resolver': {

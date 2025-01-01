@@ -17,10 +17,6 @@
     user-select: none;
     cursor: pointer;
   }
-
-  .section-pt-128 h2 b {
-    @apply text-red-500;
-  }
 }
 
 @layer utilities {

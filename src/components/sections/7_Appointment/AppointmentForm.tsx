@@ -94,7 +94,7 @@ export function AppointmentForm() {
       name: 'date',
       type: 'text',
       isRequired: true,
-      placeholder: '01/01/2024'
+      placeholder: '01/01/2025'
     }
   ];
 
@@ -125,79 +125,77 @@ export function AppointmentForm() {
   };
 
   return (
-    <div className="container">
-      <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          mobile: '',
-          message: '',
-          contact: '',
-          street: '',
-          city: 'Philadelphia',
-          state: 'PA',
-          zip: '',
-          date: ''
-        }}
-        validationSchema={Yup.object().shape({
-          name: Yup.string()
-            .min(2, 'Name should be more than 1 character')
-            .max(20, 'Name should be less than 20 characters')
-            .required('Name is required'),
-          email: Yup.string().email('Invalid Email').required('Email is required'),
-          mobile: Yup.string()
-            .matches(/^\d{3}-\d{3}-\d{4}$/, 'Invalid Mobile')
-            .required('Mobile is required'),
-          message: Yup.string()
-            .min(2, 'Message should be more than 1 character')
-            .max(500, 'Message should be less than 500 characters'),
-          contact: Yup.string().max(30),
-          street: Yup.string().max(30).required('Street is required'),
-          city: Yup.string().max(15).required('City is required'),
-          state: Yup.string().required('State is required'),
-          zip: Yup.string()
-            .matches(/^\d{5}$/, 'Invalid Zip')
-            .required('Zip is required'),
-          date: Yup.string().required('Date is required')
-        })}
-        onSubmit={(values: IValues, actions) => handleSubmit(values, actions)}
-      >
-        {({ errors, touched }) => (
-          <Form
-            name="appointment"
-            method="POST"
-            data-netlify="true"
-            className="w-full xl:w-1/2 flex flex-col gap-64"
-          >
-            <input type="hidden" name="form-name" value="appointment" className="hidden" />
+    <Formik
+      initialValues={{
+        name: '',
+        email: '',
+        mobile: '',
+        message: '',
+        contact: '',
+        street: '',
+        city: 'Philadelphia',
+        state: 'PA',
+        zip: '',
+        date: ''
+      }}
+      validationSchema={Yup.object().shape({
+        name: Yup.string()
+          .min(2, 'Name should be more than 1 character')
+          .max(20, 'Name should be less than 20 characters')
+          .required('Name is required'),
+        email: Yup.string().email('Invalid Email').required('Email is required'),
+        mobile: Yup.string()
+          .matches(/^\d{3}-\d{3}-\d{4}$/, 'Invalid Mobile')
+          .required('Mobile is required'),
+        message: Yup.string()
+          .min(2, 'Message should be more than 1 character')
+          .max(500, 'Message should be less than 500 characters'),
+        contact: Yup.string().max(30),
+        street: Yup.string().max(30).required('Street is required'),
+        city: Yup.string().max(15).required('City is required'),
+        state: Yup.string().required('State is required'),
+        zip: Yup.string()
+          .matches(/^\d{5}$/, 'Invalid Zip')
+          .required('Zip is required'),
+        date: Yup.string().required('Date is required')
+      })}
+      onSubmit={(values: IValues, actions) => handleSubmit(values, actions)}
+    >
+      {({ errors, touched }) => (
+        <Form
+          name="appointment"
+          method="POST"
+          data-netlify="true"
+          className="w-full xl:w-1/2 flex flex-col gap-64"
+        >
+          <input type="hidden" name="form-name" value="appointment" className="hidden" />
 
-            <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
-              {INPUTS.map(
-                ({ as, name, label, type, isRequired, placeholder, options, mask }: IInput) => (
-                  <div key={`AppointmentForm_FormInput_${name}`}>
-                    <FormInput
-                      key={`AppointmentForm_FormInput_${name}`}
-                      as={as}
-                      name={name}
-                      label={label}
-                      type={type}
-                      isRequired={isRequired}
-                      placeholder={placeholder}
-                      error={errors[name]}
-                      touched={touched[name]}
-                      options={options}
-                      mask={mask}
-                    />
-                    {name === 'contact' && <h2 className="text-20-bold mt-32">Address</h2>}
-                  </div>
-                )
-              )}
-            </div>
+          <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
+            {INPUTS.map(
+              ({ as, name, label, type, isRequired, placeholder, options, mask }: IInput) => (
+                <div key={`AppointmentForm_FormInput_${name}`}>
+                  <FormInput
+                    key={`AppointmentForm_FormInput_Inner_${name}`}
+                    as={as}
+                    name={name}
+                    label={label}
+                    type={type}
+                    isRequired={isRequired}
+                    placeholder={placeholder}
+                    error={errors[name]}
+                    touched={touched[name]}
+                    options={options}
+                    mask={mask}
+                  />
+                  {name === 'contact' && <h2 className="text-20-bold mt-32">Address</h2>}
+                </div>
+              )
+            )}
+          </div>
 
-            <Button tag="button" buttonType="submit" style="Primary" label="Send my Message" />
-          </Form>
-        )}
-      </Formik>
-    </div>
+          <Button buttonType="submit" style="Primary" label="Send my Message" />
+        </Form>
+      )}
+    </Formik>
   );
 }

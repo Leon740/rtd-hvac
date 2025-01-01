@@ -1,6 +1,8 @@
 {
-  "img": "sections/sections_1_services.svg",
-  "title": "Home Services <b>You Can Trust</b>",
+  "header": {
+    "img": "sections/sections_1_services.svg",
+    "title": "Home Services <b>You Can Trust</b>"
+  },
   "red": [
     {
       "img": "1_services/services_1_furnace.svg",

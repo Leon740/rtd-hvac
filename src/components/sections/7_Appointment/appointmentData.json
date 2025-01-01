@@ -1,5 +1,7 @@
 {
-  "img": "sections/sections_7_appointment.svg",
-  "title": "Request an <b>appointment</b>",
-  "paragraph": "Have any questions or concerns? Feel free to ask."
+  "header": {
+    "img": "sections/sections_7_appointment.svg",
+    "title": "Request an <b>Appointment</b>",
+    "paragraph": "Have any questions or concerns? Feel free to ask."
+  }
 }

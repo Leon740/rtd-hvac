@@ -1,15 +1,11 @@
 ---
-import CONTACTS_DATA from './contactsData.json';
+import DATA from './contactsData.json';
 import SectionHeader from '@components/global/SectionHeader.astro';
 import { ContactsForm } from './ContactsForm';
 ---
 
-<div class="section-pt-128-flex-64">
-  <SectionHeader
-    img={CONTACTS_DATA.img}
-    title={CONTACTS_DATA.title}
-    paragraph={CONTACTS_DATA.paragraph}
-  />
+<div class="container section-pt-128-flex-64">
+  <SectionHeader data={DATA.header} />
 
   <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
     <input type="text" name="name" />

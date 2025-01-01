@@ -1,4 +1,8 @@
 {
+  "logo": {
+    "src": "global/global_logo.svg",
+    "alt": "RTD HVAC Logo"
+  },
   "links": [
     {
       "label": "Homepage",

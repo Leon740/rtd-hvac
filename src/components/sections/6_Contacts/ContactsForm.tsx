@@ -77,59 +77,57 @@ export function ContactsForm() {
   };
 
   return (
-    <div className="container">
-      <Formik
-        initialValues={{
-          name: '',
-          email: '',
-          mobile: '',
-          message: ''
-        }}
-        validationSchema={Yup.object().shape({
-          name: Yup.string()
-            .min(2, 'Name should be more than 1 character')
-            .max(20, 'Name should be less than 20 characters')
-            .required('Name is required'),
-          email: Yup.string().email('Invalid Email').required('Email is required'),
-          mobile: Yup.string()
-            .matches(/^\d{3}-\d{3}-\d{4}$/, 'Invalid Mobile')
-            .required('Mobile is required'),
-          message: Yup.string()
-            .min(2, 'Message should be more than 1 character')
-            .max(500, 'Message should be less than 500 characters')
-            .required('Message is required')
-        })}
-        onSubmit={(values: IValues, actions) => handleSubmit(values, actions)}
-      >
-        {({ errors, touched }) => (
-          <Form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            className="w-full xl:w-1/2 flex flex-col gap-64"
-          >
-            <input type="hidden" name="form-name" value="contact" className="hidden" />
+    <Formik
+      initialValues={{
+        name: '',
+        email: '',
+        mobile: '',
+        message: ''
+      }}
+      validationSchema={Yup.object().shape({
+        name: Yup.string()
+          .min(2, 'Name should be more than 1 character')
+          .max(20, 'Name should be less than 20 characters')
+          .required('Name is required'),
+        email: Yup.string().email('Invalid Email').required('Email is required'),
+        mobile: Yup.string()
+          .matches(/^\d{3}-\d{3}-\d{4}$/, 'Invalid Mobile')
+          .required('Mobile is required'),
+        message: Yup.string()
+          .min(2, 'Message should be more than 1 character')
+          .max(500, 'Message should be less than 500 characters')
+          .required('Message is required')
+      })}
+      onSubmit={(values: IValues, actions) => handleSubmit(values, actions)}
+    >
+      {({ errors, touched }) => (
+        <Form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          className="w-full xl:w-1/2 flex flex-col gap-64"
+        >
+          <input type="hidden" name="form-name" value="contact" className="hidden" />
 
-            <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
-              {INPUTS.map(({ as, name, type, isRequired, placeholder, mask }: IInput) => (
-                <FormInput
-                  key={`ContactsForm_FormInput_${name}`}
-                  as={as}
-                  name={name}
-                  type={type}
-                  isRequired={isRequired}
-                  placeholder={placeholder}
-                  error={errors[name]}
-                  touched={touched[name]}
-                  mask={mask}
-                />
-              ))}
-            </div>
+          <div className="flex flex-col gap-32 py-64 px-32 rounded-16 bg-white">
+            {INPUTS.map(({ as, name, type, isRequired, placeholder, mask }: IInput) => (
+              <FormInput
+                key={`ContactsForm_FormInput_${name}`}
+                as={as}
+                name={name}
+                type={type}
+                isRequired={isRequired}
+                placeholder={placeholder}
+                error={errors[name]}
+                touched={touched[name]}
+                mask={mask}
+              />
+            ))}
+          </div>
 
-            <Button tag="button" buttonType="submit" style="Primary" label="Send my Message" />
-          </Form>
-        )}
-      </Formik>
-    </div>
+          <Button buttonType="submit" style="Primary" label="Send my Message" />
+        </Form>
+      )}
+    </Formik>
   );
 }

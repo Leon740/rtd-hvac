@@ -1,7 +1,7 @@
 ---
-import HEADER_DATA from './headerData.json';
+import DATA from './headerData.json';
 import { Link } from '@components/global/Link';
-import { Icon } from '@components/global/Icon';
+import { Icon, type TIcon } from '@components/global/Icon';
 import Img from '@components/global/Img.astro';
 
 const currentPath = Astro.url.pathname;
@@ -10,17 +10,11 @@ const currentPath = Astro.url.pathname;
 <header id="headerContainer" class="bg-white sticky top-0 z-header100">
   <div class="container">
     <div class="py-16 flex flex-row flex-wrap items-center justify-between">
-      <Link tag="a" href="/">
-        <Img
-          src="global/global_logo.svg"
-          alt="RTD HVAC Logo"
-          width={128}
-          height={64}
-          isLazy={false}
-        />
+      <Link href="/">
+        <Img src={DATA.logo.src} alt={DATA.logo.alt} width={128} height={64} isLazy={false} />
       </Link>
 
-      <Link tag="button" className="lg:hidden hover:text-red-500">
+      <Link buttonType="button" className="lg:hidden hover:text-red-500">
         <span id="menuToggler" class="flex flex-col items-center">
           <Icon icon="bars" className="text-32" />
           <span class="text-16">Menu</span>
@@ -33,10 +27,9 @@ const currentPath = Astro.url.pathname;
       >
         <ul class="pt-16 lg:pt-0 flex flex-col lg:flex-row gap-16 lg:gap-32">
           {
-            HEADER_DATA.links.map(({ href, label }) => (
+            DATA.links.map(({ href, label }) => (
               <li>
                 <Link
-                  tag="a"
                   href={href}
                   className={`text-16 ${currentPath === href ? 'text-red-500' : ''} hover:text-red-500`}
                 >
@@ -51,15 +44,12 @@ const currentPath = Astro.url.pathname;
 
     <div class="flex flex-wrap">
       {
-        HEADER_DATA.buttons.map(({ href, icon, label }, index) => (
+        DATA.buttons.map(({ href, icon, label }, index) => (
           <Link
-            tag="a"
             href={href}
             className={`w-full md:w-1/2 py-8 px-16 flex flex-row items-center gap-8 text-white text-16 ${index === 0 ? 'bg-red-500' : 'bg-blue-500'}`}
           >
-            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-            {/* @ts-ignore */}
-            <Icon icon={icon} />
+            <Icon icon={icon as TIcon} />
             <span>{label}</span>
           </Link>
         ))

@@ -1,5 +1,5 @@
 ---
-import FAQS_DATA from './faqsData.json';
+import DATA from './faqsData.json';
 import SectionHeader from '@components/global/SectionHeader.astro';
 import { FaqsTabs, type TTabKey } from './FaqsTabs/FaqsTabs';
 
@@ -10,12 +10,10 @@ interface Props {
 const { activeTabKey } = Astro.props;
 ---
 
-<div class="section-pt-128">
-  <SectionHeader img={FAQS_DATA.img} title={FAQS_DATA.title} paragraph={FAQS_DATA.paragraph} />
+<div class="container section-pt-128">
+  <SectionHeader data={DATA.header} />
 
   <div id="faqsTabsHeaderScrollIntoView"></div>
 
-  <div class="container">
-    <FaqsTabs tabs={FAQS_DATA.tabs} activeTabKey={activeTabKey} client:load />
-  </div>
+  <FaqsTabs tabs={DATA.tabs} activeTabKey={activeTabKey} client:load />
 </div>
