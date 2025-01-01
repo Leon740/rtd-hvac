@@ -24,12 +24,6 @@ export function FaqsItem({
   title,
   paragraph
 }: IFaqsItemProps) {
-  // handleClick
-  const buttonOnClick = () => {
-    handleClick();
-  };
-
-  // toggle
   const { width: windowWidth } = useWindowSize();
 
   const faqsItemBodyRf = useRef<HTMLDivElement>(null);
@@ -46,7 +40,7 @@ export function FaqsItem({
     <>
       <button
         type="button"
-        onClick={buttonOnClick}
+        onClick={handleClick}
         className={`w-full text-16 p-16 xl:p-32 flex flex-row items-center justify-between ${hoverColor} ${isActive ? activeColor : ''}`}
       >
         <span className="text-left">{title}</span>
@@ -56,7 +50,7 @@ export function FaqsItem({
 
       <div className="overflow-hidden transition-all" ref={faqsItemBodyRf}>
         <div
-          className={`px-16 pb-16 xl:px-32 xl:pb-32 text-p ${faqsItemStyles['faqs-p']}`}
+          className={`px-16 pb-16 xl:px-32 xl:pb-32 text-p leading-loose ${faqsItemStyles['faqs-p']}`}
           dangerouslySetInnerHTML={{ __html: marked(paragraph) as string }}
         />
       </div>

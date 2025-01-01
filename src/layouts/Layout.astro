@@ -9,7 +9,7 @@ interface Props {
   hasPagesNav?: boolean;
 }
 
-const { title, hasPagesNav = true } = Astro.props;
+const { title, hasPagesNav = true } = Astro.props as Props;
 ---
 
 <!doctype html>
