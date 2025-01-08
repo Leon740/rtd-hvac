@@ -1,4 +1,4 @@
-import { Icon, type TIcon } from '@components/global/Icon';
+import { Icon } from '@components/global/Icon';
 import { Link, type ILinkProps } from '@components/global/Link';
 
 type TButtonProps = Omit<ILinkProps, 'children'>;
@@ -6,7 +6,7 @@ type TButtonProps = Omit<ILinkProps, 'children'>;
 interface IButtonProps extends TButtonProps {
   style: 'Primary' | 'Secondary';
   label: string;
-  icon?: TIcon;
+  icon?: string;
   iconClassName?: string;
 }
 
