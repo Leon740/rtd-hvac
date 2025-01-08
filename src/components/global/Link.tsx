@@ -28,6 +28,7 @@ export function Link({
       </a>
     )
   ) : (
+    // eslint-disable-next-line react/button-has-type
     <button type={buttonType || 'button'} onClick={handleClick} className={className}>
       {children}
     </button>
