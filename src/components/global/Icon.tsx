@@ -1,7 +1,5 @@
-export type TIcon = 'arrow' | 'bars' | 'mobile' | 'calendar' | 'star';
-
-interface IIconProps {
-  icon: TIcon;
+export interface IIconProps {
+  icon: string;
   className?: string;
 }
 
