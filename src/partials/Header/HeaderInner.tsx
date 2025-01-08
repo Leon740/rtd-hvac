@@ -15,7 +15,10 @@ export function HeaderInner({ currentPath }: IHeaderInnerProps) {
   const [isOpenedSt, setIsOpenedSt] = useState(false);
 
   const handleButtonClick = () => {
-    setIsOpenedSt((prev) => !prev);
+    setIsOpenedSt((prev) => {
+      document.body.classList.toggle('overflow-hidden');
+      return !prev;
+    });
   };
 
   return (
