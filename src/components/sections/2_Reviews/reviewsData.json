@@ -3,7 +3,10 @@
     "img": "sections/sections_2_reviews.svg",
     "title": "We <b>Value</b> our <b>Customers</b>"
   },
-  "googleImg": "2_reviews/reviews_google.svg",
+  "img": {
+    "src": "2_reviews/reviews_google.svg",
+    "alt": "RTD HVAC Reviews"
+  },
   "reviews": [
     {
       "title": "Exceptional all around",

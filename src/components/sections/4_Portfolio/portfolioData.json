@@ -3,6 +3,7 @@
     "img": "sections/sections_4_portfolio.svg",
     "title": "Our Successfully <b>Completed Jobs</b>"
   },
+  "imagesAlt": "RTD HVAC Portfolio",
   "images": [
     "4_portfolio/portfolio_1.jpg",
     "4_portfolio/portfolio_2.jpg",
