@@ -1,28 +1,14 @@
 ---
-import DATA from './footerData.json';
-import { Link } from '@components/global/Link';
-import Img from '@components/global/Img.astro';
+import { SocialNav } from '@partials/SocialNav/SocialNav';
+
 const date = new Date();
 ---
 
 <footer>
   <div class="bg-white py-32">
-    <ul class="container flex flex-col gap-32 lg:flex-row">
-      {
-        DATA.socialLinks.map(({ label, href, img }) => (
-          <li class="w-full lg:w-1/4">
-            <Link
-              href={href}
-              isExternal
-              className="flex flex-row items-center gap-8 hover:text-red-500"
-            >
-              <Img src={img} alt="RTD HVAC social contacts" width={24} height={24} />
-              <span class="text-p">{label}</span>
-            </Link>
-          </li>
-        ))
-      }
-    </ul>
+    <div class="container">
+      <SocialNav />
+    </div>
   </div>
 
   <div class="py-16 container">

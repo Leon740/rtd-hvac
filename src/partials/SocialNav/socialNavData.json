@@ -1,0 +1,36 @@
+{
+  "links": [
+    {
+      "label": "(267) 471-3580",
+      "href": "tel:2674713580",
+      "img": {
+        "src": "social/social_1_mobile.svg",
+        "alt": "RTD HVAC Mobile"
+      }
+    },
+    {
+      "label": "rtdhvac@gmail.com",
+      "href": "mailto:rtdhvac@gmail.com",
+      "img": {
+        "src": "social/social_2_email.svg",
+        "alt": "RTD HVAC Email"
+      }
+    },
+    {
+      "label": "rtdhvac",
+      "href": "https://instagram.com/",
+      "img": {
+        "src": "social/social_3_instagram.svg",
+        "alt": "RTD HVAC Instagram"
+      }
+    },
+    {
+      "label": "rtdhvac",
+      "href": "https://www.facebook.com/profile.php?id=61566989272451",
+      "img": {
+        "src": "social/social_4_facebook.svg",
+        "alt": "RTD HVAC Facebook"
+      }
+    }
+  ]
+}
