@@ -16,14 +16,14 @@ export function HeaderInner({ currentPath }: IHeaderInnerProps) {
 
   const handleButtonClick = () => {
     setIsOpenedSt((prev) => {
-      document.body.classList.toggle('overflow-hidden');
+      document.body.classList.toggle('modal-opened');
       return !prev;
     });
   };
 
   return (
     <>
-      <header className="w-full bg-white sticky top-0 z-header1000 border-solid border-b-2 border-gray-100">
+      <header className="w-full bg-white sticky top-0 z-header1000 border-solid border-b-2 lg:border-0 border-gray-100">
         <div className="container">
           <div className="py-16 flex flex-row items-center justify-between">
             <Link href="/">

@@ -17,6 +17,10 @@
     user-select: none;
     cursor: pointer;
   }
+
+  .modal-opened {
+    @apply overflow-hidden pr-16;
+  }
 }
 
 @layer utilities {

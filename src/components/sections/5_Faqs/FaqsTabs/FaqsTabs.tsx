@@ -1,7 +1,6 @@
 import { useState } from 'preact/hooks';
 import { FaqsTabBody } from './FaqsTabBody';
 import { type IFaqsItem } from './FaqsItem';
-import { useEffect } from 'react';
 import { useWindowSize } from '@hooks/useWindowSize';
 
 export type TTabKey =
@@ -81,16 +80,14 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
 
   // scrollIntoView
   const { width: windowWidth } = useWindowSize();
-  const [headerHeightSt, setHeaderHeightSt] = useState<177 | 137>(177);
-  useEffect(() => {
-    setHeaderHeightSt(windowWidth < 768 ? 177 : 137);
-  }, [windowWidth]);
 
   const handleTabHeaderClick = (tab: TTabKey) => {
     setActiveTabKeySt(tab);
 
     window.scrollTo({
-      top: document.getElementById('faqsTabsHeaderScrollIntoView')!.offsetTop - headerHeightSt,
+      top:
+        document.getElementById('faqsTabsHeaderScrollIntoView')!.offsetTop -
+        (windowWidth < 768 ? 96 : 136),
       behavior: 'smooth'
     });
   };
@@ -101,7 +98,7 @@ export function FaqsTabs({ tabs, activeTabKey }: IFaqsTabsPropsI) {
       {/* gap-16 -> 32 - tabHeader py-16 = 16 */}
 
       {/* top = header height */}
-      <ul className="flex flex-row gap-32 py-16 sticky z-faqsTabsHeader10 top-[177px] md:top-[137px] bg-body overflow-auto">
+      <ul className="flex flex-row gap-32 py-16 sticky z-faqsTabsHeader10 top-96 lg:top-[136px] bg-body overflow-auto">
         {tabsKeys.map((tabKey) => {
           const tabColors = COLORS[tabKey as TTabKey];
 
